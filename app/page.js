@@ -1,7 +1,7 @@
 'use client';
 
-import Button from "@/components/basic/button";
-import { NavigationMain } from "@/components/basic/navigation";
+import Button from "@/components/atoms/Button";
+import { NavigationMain } from "@/components/organisms/Navigation";
 
 export default function Home() {
   return (
