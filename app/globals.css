@@ -25,3 +25,13 @@ body {
     text-wrap: balance;
   }
 }
+
+.bg-gradient-4-green {
+  background-image: linear-gradient(
+    to bottom,
+    #006C67,
+    #005E5B,
+    #00504E,
+    #004B4A
+  );
+}

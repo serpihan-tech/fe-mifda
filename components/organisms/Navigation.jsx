@@ -1,4 +1,11 @@
 import Link from "next/link";
+import "@/app/globals.css";
+import { Montserrat } from 'next/font/google'
+
+const montserrat =  Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
 
 /**
  * @param {{ 
@@ -50,7 +57,7 @@ export function NavigationMain(props) {
   } = props
 
   return (
-    <div className="w-full flex justify-center py-4 px-8 text-black">
+    <div className={`w-full flex justify-center py-4 px-8 ${montserrat.className} font-bold`}>
       <div className="flex gap-4">
         <Link href={"/"}>{"Label"}</Link>
         <Link href={"/"}>{"Label"}</Link>
