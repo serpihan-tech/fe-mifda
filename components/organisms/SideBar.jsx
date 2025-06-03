@@ -7,11 +7,12 @@ import {
   WalletMinus,
   WalletAdd1,
   Cards,
+  LogoutCurve,
 } from "iconsax-react";
+import LogOutButton from "../atoms/LogOutButton";
 
 // Komponen Utama SideBar
 export default function SideBar({ isOpen, toggleSidebar }) {
-
   return (
     <>
       <div
@@ -40,13 +41,11 @@ export default function SideBar({ isOpen, toggleSidebar }) {
         </div>
 
         {/* Menu Items */}
-        <div className={`${isOpen ? "flex" : "hidden md:flex"} flex-col pb-3`}>
-          
+        <div className="flex flex-col pb-3">
           {/* Dashboard */}
           <SidebarItem
             title="Dashboard"
             icon={Home3}
-            colorIcon="#146168"
             url="/dashboard"
             open={isOpen}
           />
@@ -55,7 +54,6 @@ export default function SideBar({ isOpen, toggleSidebar }) {
           <SidebarItem
             title="Pendaftaran"
             icon={ProfileAdd}
-            colorIcon="#146168"
             url="/pendaftaran"
             open={isOpen}
           />
@@ -64,7 +62,6 @@ export default function SideBar({ isOpen, toggleSidebar }) {
           <SidebarItem
             title="Pemasukan"
             icon={WalletAdd1}
-            colorIcon="#146168"
             url="/pemasukan"
             open={isOpen}
           />
@@ -73,7 +70,6 @@ export default function SideBar({ isOpen, toggleSidebar }) {
           <SidebarItem
             title="Pengeluaran"
             icon={WalletMinus}
-            colorIcon="#146168"
             url="/pengeluaran"
             open={isOpen}
           />
@@ -82,10 +78,12 @@ export default function SideBar({ isOpen, toggleSidebar }) {
           <SidebarItem
             title="Rekening"
             icon={Cards}
-            colorIcon="#146168"
             url="/rekening"
             open={isOpen}
           />
+
+          {/* Logout */}
+          <LogOutButton title="Logout" icon={LogoutCurve} colorIcon="#dc1010"/>
         </div>
       </div>
     </>
