@@ -17,12 +17,12 @@ export default function LogOutButton({
     <div
       className={`${montserrat.className} px-5 py-2 bg-[#f2fffa] inline-flex flex-col justify-start items-start mt-10`}
     >
-      <button className="self-stretch h-11 px-4 py-2 bg-[#f2fffa] rounded-2xl inline-flex justify-start items-center gap-2.5">
+      <button className="group self-stretch h-11 px-4 py-2 bg-[#f2fffa] hover:bg-[#e40514] text-[#e40514] hover:text-white rounded-2xl inline-flex justify-start items-center gap-2.5 transition-all duration-300 ease-in-out">
         <div className="flex justify-start items-center gap-5">
           <div className="flex items-center">
-            <Icon size="25" className="mr-2" variant="Bold" color={colorIcon} />
+            <Icon size="25" className="mr-2" variant="Bold" color="currentColor" />
           </div>
-          <span className="transition-opacity text-[#e40514] font-semibold">
+          <span className="transition-opacity font-semibold">
             {title}
           </span>
         </div>
