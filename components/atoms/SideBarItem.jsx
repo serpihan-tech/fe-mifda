@@ -1,6 +1,7 @@
 "use client";
 
 import { Montserrat } from "next/font/google";
+import { useRouter } from "next/navigation";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -8,17 +9,22 @@ const montserrat = Montserrat({
 });
 
 // Komponen SidebarItem
-export default function SidebarItem ({
-  title,
-  icon: Icon,
-  colorIcon,
-}) {
+export default function SidebarItem({ title, icon: Icon, url }) {
+  const router = useRouter();
+  const handleClick = () => {
+    if (url) {
+      router.push(url);
+    }
+  };
   return (
     <>
       <div
         className={`${montserrat.className} px-5 py-2 bg-[#f2fffa] inline-flex flex-col justify-start items-start gap-2.5`}
       >
-        <button className="group self-stretch h-11 px-4 py-2 bg-[#f2fffa] hover:bg-[#146168] text-[#146168] hover:text-white rounded-2xl inline-flex justify-start items-center gap-2.5 transition-all duration-300 ease-in-out">
+        <button
+          className="group self-stretch h-11 px-4 py-2 bg-[#f2fffa] hover:bg-[#146168] text-[#146168] hover:text-white rounded-2xl inline-flex justify-start items-center gap-2.5 transition-all duration-300 ease-in-out"
+          onClick={handleClick}
+        >
           <div className="flex justify-start items-center gap-5">
             <div className="flex items-center">
               <Icon
@@ -36,4 +42,4 @@ export default function SidebarItem ({
       </div>
     </>
   );
-};
+}

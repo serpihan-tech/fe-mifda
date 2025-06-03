@@ -12,7 +12,7 @@ import {
 import LogOutButton from "../atoms/LogOutButton";
 
 // Komponen Utama SideBar
-export default function SideBar({ isOpen, toggleSidebar }) {
+export default function SideBar() {
   return (
     <>
       <div
@@ -20,9 +20,7 @@ export default function SideBar({ isOpen, toggleSidebar }) {
       >
         {/* Logo dan Judul */}
         <div
-          className={`${
-            isOpen ? "flex" : "hidden md:flex"
-          } gap-4 items-center justify-center pt-10 pb-8`}
+          className="flex gap-4 items-center justify-center pt-10 pb-8"
         >
           <Image
             src="/svg/e-mifda.svg"
@@ -32,9 +30,7 @@ export default function SideBar({ isOpen, toggleSidebar }) {
             priority
           />
           <h1
-            className={`text-[#146168] text-xl font-semibold transition-all duration-300 ease-in-out ${
-              !isOpen && "hidden"
-            }`}
+            className="text-[#146168] text-xl font-semibold transition-all duration-300 ease-in-out"
           >
             E-mifda
           </h1>
@@ -47,7 +43,6 @@ export default function SideBar({ isOpen, toggleSidebar }) {
             title="Dashboard"
             icon={Home3}
             url="/dashboard"
-            open={isOpen}
           />
 
           {/* Pendaftaran */}
@@ -55,7 +50,6 @@ export default function SideBar({ isOpen, toggleSidebar }) {
             title="Pendaftaran"
             icon={ProfileAdd}
             url="/pendaftaran"
-            open={isOpen}
           />
 
           {/* Pemasukan */}
@@ -63,7 +57,6 @@ export default function SideBar({ isOpen, toggleSidebar }) {
             title="Pemasukan"
             icon={WalletAdd1}
             url="/pemasukan"
-            open={isOpen}
           />
 
           {/* Pengeluaran */}
@@ -71,7 +64,6 @@ export default function SideBar({ isOpen, toggleSidebar }) {
             title="Pengeluaran"
             icon={WalletMinus}
             url="/pengeluaran"
-            open={isOpen}
           />
 
           {/* Rekening */}
@@ -79,7 +71,6 @@ export default function SideBar({ isOpen, toggleSidebar }) {
             title="Rekening"
             icon={Cards}
             url="/rekening"
-            open={isOpen}
           />
 
           {/* Logout */}
