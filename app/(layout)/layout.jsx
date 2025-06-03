@@ -1,39 +1,26 @@
-"use client"
-import { useState } from "react";
+"use client";
 import SideBar from "@/components/organisms/SideBar";
 
 export default function Layout({ children }) {
-  const [sidebarOpen, setSidebarOpen] = useState(true); // Tambahkan state ini
-
   return (
-    <div className="flex min-h-screen">
-      <SideBar
-        isOpen={sidebarOpen}
-        toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
-      />
-      <main
-        className={`bg-[#FAFAFA] dark:bg-dark_net-pri flex-1 transition-all duration-300 ease-in-out overflow-x-auto`}
-      >
-        <div
-          className={`overflow-hidden z-10 fixed right-0 ${
-            sidebarOpen
-              ? "md:left-[200px] lg:left-[256px] "
-              : "left-[22px] md:left-[62px] lg:left-[80px]"
-          } transition-all duration-300 ease-in-out`}
-        >
+    <div className="grid grid-cols-[200px_1fr] lg:grid-cols-[256px_1fr] min-h-screen">
+      {/* Sidebar */}
+      <aside className="bg-[#f2fffa]">
+        <SideBar />
+      </aside>
+      
+      {/* Main area */}
+      <div className="grid grid-rows-[auto_1fr]">
+        {/* Header */}
+        <header className="h-[145px] sticky top-0 z-10">
           {/* <DashboardHeader /> */}
-        </div>
-
-        <div
-          className={`${
-            sidebarOpen
-              ? "ml-4 md:ml-[200px] lg:ml-[256px]"
-              : "ml-[20px] md:ml-[60px] lg:ml-[80px]"
-          } p-3 md:p-6 lg:p-10 mt-14 md:mt-16 lg:mt-[100px] transition-all duration-300 ease-in-out`}
-        >
+        </header>
+        
+        {/* Content */}
+        <main className="bg-[#f9fffb] p-3 md:p-6 lg:p-10 overflow-auto">
           {children}
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
