@@ -38,7 +38,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${monserrat.variable} antialiased w-full h-screen`}
+        className={`${monserrat.variable}`}
+        style={{
+          height: "100vh",
+          width: "100vw",
+          overflow: "hidden",
+        }}
       >
         {children}
       </body>
