@@ -18,7 +18,7 @@ export default function Layout({ children }) {
         </header>
 
         {/* Content */}
-        <main className="bg-[#f9fffb] ps-10 pe-12 overflow-auto">
+        <main className="bg-[#f9fffb] ps-10 pe-12 overflow-auto pt-[2px]">
           {children}
         </main>
       </div>

@@ -1,6 +1,15 @@
-"use client"
+"use client";
 import Image from "next/image";
-import { ArrowLeft2, LogoutCurve, ArrowDown2, Home3, ProfileAdd, WalletMinus, WalletAdd1, Cards } from "iconsax-react";
+import {
+  ArrowLeft2,
+  LogoutCurve,
+  ArrowDown2,
+  Home3,
+  ProfileAdd,
+  WalletMinus,
+  WalletAdd1,
+  Cards,
+} from "iconsax-react";
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { Montserrat } from "next/font/google";
@@ -10,20 +19,19 @@ const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-
 // Komponen HoverDropdown
-const HoverDropdown = ({ items, position = 'right' }) => {
+const HoverDropdown = ({ items, position = "right" }) => {
   return (
-    <div 
+    <div
       className={`absolute z-50 bg-white dark:bg-dark_net-pri shadow-lg rounded-xl 
-      ${position === 'right' ? 'left-full ml-2' : 'right-full mr-2'} 
+      ${position === "right" ? "left-full ml-2" : "right-full mr-2"} 
       top-0 min-w-[200px] py-2`}
     >
       {items.map((item, index) => (
-        <div 
-          key={index} 
+        <div
+          key={index}
           className="px-4 py-2 hover:bg-pri-main hover:text-white cursor-pointer"
-          onClick={() => window.location.href = item.url}
+          onClick={() => (window.location.href = item.url)}
         >
           {item.label}
         </div>
@@ -55,7 +63,11 @@ const SidebarDropdown = ({ items, open }) => {
             key={index}
             href={item.url}
             className={`block p-2 pl-8 text-sm rounded-xl transition 
-              ${isActive ? 'text-pri-main dark:text-pri-border' : 'text-black dark:text-white hover:text-pri-main'}
+              ${
+                isActive
+                  ? "text-pri-main dark:text-pri-border"
+                  : "text-black dark:text-white hover:text-pri-main"
+              }
             `}
           >
             {shouldRenderText && <>- {item.label}</>}
@@ -67,20 +79,22 @@ const SidebarDropdown = ({ items, open }) => {
 };
 
 // Komponen SidebarItem
-const SidebarItem = ({ 
-  title, 
-  icon: Icon, 
-  dropdownItems, 
-  colorIcon, 
-  url, 
-  open = true 
+const SidebarItem = ({
+  title,
+  icon: Icon,
+  dropdownItems,
+  colorIcon,
+  url,
+  open = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const isActive = url && pathname === url;
-  const isDropdownActive = dropdownItems?.some(item => pathname.startsWith(item.url));
+  const isDropdownActive = dropdownItems?.some((item) =>
+    pathname.startsWith(item.url)
+  );
   const [shouldRenderText, setShouldRenderText] = useState(open);
 
   useEffect(() => {
@@ -110,64 +124,64 @@ const SidebarItem = ({
   }, [open]);
 
   return (
-    <div 
+    <div
       className={`${montserrat.className} relative`}
       onMouseEnter={() => !open && dropdownItems && setIsHovered(true)}
       onMouseLeave={() => !open && dropdownItems && setIsHovered(false)}
     >
       <button
         className={`w-full flex items-center p-2 rounded-xl transition relative ${
-          isActive || isDropdownActive 
-            ? 'bg-pri-main text-netral-0' 
-            : 'text-black dark:text-white hover:bg-pri-main hover:text-netral-0'
+          isActive || isDropdownActive
+            ? "bg-pri-main text-netral-0"
+            : "text-black dark:text-white hover:bg-pri-main hover:text-netral-0"
         }`}
         onClick={handleClick}
       >
         <div className="flex items-center">
-          <Icon 
-            size="25" 
-            className="mr-2" 
-            variant="Bold" 
-            color={colorIcon}
-          />
-          {shouldRenderText && <span className="transition-opacity font-semibold">{title}</span>}
+          <Icon size="25" className="mr-2" variant="Bold" color={colorIcon} />
+          {shouldRenderText && (
+            <span className="transition-opacity font-semibold">{title}</span>
+          )}
         </div>
 
         {dropdownItems && open && (
           <span className="ml-auto">
             {isOpen ? (
-              <ArrowDown2 size="20" color="currentColor" variant="Bold"/>
+              <ArrowDown2 size="20" color="currentColor" variant="Bold" />
             ) : (
-              <ArrowRight2 size="20" color="currentColor" variant="Bold"/>
+              <ArrowRight2 size="20" color="currentColor" variant="Bold" />
             )}
           </span>
         )}
       </button>
-      
+
       {dropdownItems && isOpen && open && (
-        <SidebarDropdown items={dropdownItems} open={open}/>
+        <SidebarDropdown items={dropdownItems} open={open} />
       )}
 
       {dropdownItems && !open && isHovered && (
-        <HoverDropdown 
-          items={dropdownItems} 
-          position="right"
-        />
+        <HoverDropdown items={dropdownItems} position="right" />
       )}
     </div>
   );
 };
 
 // Komponen LogoutButton
-const LogoutButton = ({ title, icon: Icon, colorIcon, open = true, onConfirm }) => {
+const LogoutButton = ({
+  title,
+  icon: Icon,
+  colorIcon,
+  open = true,
+  onConfirm,
+}) => {
   const [shouldRenderText, setShouldRenderText] = useState(open);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (open) {
-      setTimeout(() => setShouldRenderText(true), 300); 
+      setTimeout(() => setShouldRenderText(true), 300);
     } else {
-      setShouldRenderText(false); 
+      setShouldRenderText(false);
     }
   }, [open]);
 
@@ -180,7 +194,13 @@ const LogoutButton = ({ title, icon: Icon, colorIcon, open = true, onConfirm }) 
     >
       <div className="flex items-center">
         <Icon size="25" className="mr-2" variant="Bold" color={colorIcon} />
-        {loading ? "Proses logout...." : shouldRenderText && <span className="transition-opacity text-[#e40514] font-semibold">{title}</span>}
+        {loading
+          ? "Proses logout...."
+          : shouldRenderText && (
+              <span className="transition-opacity text-[#e40514] font-semibold">
+                {title}
+              </span>
+            )}
       </div>
     </button>
   );
@@ -221,23 +241,22 @@ export default function SideBar({ isOpen, toggleSidebar }) {
   const handleLogout = () => {
     setLogoutOpen(true);
   };
-  
+
   const confirmLogOut = async () => {
     setLoading(true);
     try {
       // Implementasi logout sesuai kebutuhan
-      // const response = await logout(); 
+      // const response = await logout();
       // if(response){
       //   sessionStorage.setItem("log_out", response.message)
       //   router.push("/login")
       // }
-      
+
       // Sementara untuk demo
       setTimeout(() => {
         sessionStorage.clear();
         router.push("/login");
       }, 1000);
-      
     } catch (error) {
       console.error("Gagal logout:", error);
     } finally {
@@ -271,71 +290,83 @@ export default function SideBar({ isOpen, toggleSidebar }) {
           } p-2 rounded-full bg-pri-main cursor-pointer transition-transform duration-300 ease-in-out`}
           onClick={toggleSidebar}
         >
-          <ArrowLeft2 color="white" className="w-[18px] md:w-[18px] lg:w-[22px]" />
+          <ArrowLeft2
+            color="white"
+            className="w-[18px] md:w-[18px] lg:w-[22px]"
+          />
         </div>
 
         {/* Logo dan Judul */}
-        <div className={`${
+        <div
+          className={`${
             isOpen ? "flex" : "hidden md:flex"
-          } gap-4 items-center justify-center`}>
-          <Image src="/svg/e-mifda.svg" alt="e-mifda" width={50} height={50} priority />
+          } gap-4 items-center justify-center`}
+        >
+          <Image
+            src="/svg/e-mifda.svg"
+            alt="e-mifda"
+            width={50}
+            height={50}
+            priority
+          />
           <h1
             className={`text-[#146168] text-xl font-semibold transition-all duration-300 ease-in-out ${
               !isOpen && "hidden"
             }`}
           >
-            E-mifda
+            e-mifda
           </h1>
         </div>
 
         {/* Menu Items */}
-        <div className={`${
+        <div
+          className={`${
             isOpen ? "flex" : "hidden md:flex"
-          } flex-col pt-5 pb-3 gap-4`}>
-          
+          } flex-col pt-5 pb-3 gap-4`}
+        >
           {/* Dashboard */}
-          <SidebarItem 
-            title="Dashboard" 
-            icon={Home3} 
-            colorIcon="#146168" 
-            url="/dashboard" 
-            open={isOpen} 
+          <SidebarItem
+            title="Dashboard"
+            icon={Home3}
+            colorIcon="#146168"
+            url="/dashboard"
+            open={isOpen}
           />
 
           {/* Pendaftaran */}
-          <SidebarItem 
-            title="Pendaftaran" 
-            icon={ProfileAdd} 
-            colorIcon="#146168" 
-            url="/pendaftaran" 
-            open={isOpen} 
+          <SidebarItem
+            title="Pendaftaran"
+            icon={ProfileAdd}
+            colorIcon="#146168"
+            url="/pendaftaran"
+            open={isOpen}
           />
 
           {/* Pemasukan */}
-          <SidebarItem 
-            title="Pemasukan" 
-            icon={WalletAdd1} 
-            colorIcon="#146168" 
-            url="/pemasukan" 
-            open={isOpen} 
+          <SidebarItem
+            title="Pemasukan"
+            icon={WalletAdd1}
+            colorIcon="#146168"
+            url="/pemasukan"
+            open={isOpen}
           />
 
           {/* Pengeluaran */}
-          <SidebarItem 
-            title="Pengeluaran" 
-            icon={WalletMinus} 
-            colorIcon="#146168" 
-            url="/pengeluaran" 
-            open={isOpen} 
+          <SidebarItem
+            title="Pengeluaran"
+            icon={WalletMinus}
+            colorIcon="#146168"
+            url="/pengeluaran"
+            open={isOpen}
           />
-          
+
           {/* Rekening */}
-          <SidebarItem 
-            title="Rekening" 
-            icon={Cards} 
-            colorIcon="#146168" 
-            url="/rekening" 
-            open={isOpen} 
+          <SidebarItem
+            title="Rekening"
+            icon={Cards}
+            colorIcon="#146168"
+            url="/rekening"
+            open={isOpen}
           />
 
           {/* Kepegawaian
@@ -350,22 +381,19 @@ export default function SideBar({ isOpen, toggleSidebar }) {
               { label: "Ruangan", url: "/kepegawaian/ruangan"},
             ]}
           /> */}
-
         </div>
-        
+
         {/* Theme Switcher */}
-        <div className={`${
-            isOpen ? "flex" : "hidden md:flex"
-          } mb-7`}>
+        <div className={`${isOpen ? "flex" : "hidden md:flex"} mb-7`}>
           {/* <ThemeSwitcher open={isOpen}/> */}
         </div>
-        
+
         {/* Logout Button */}
-        <LogoutButton 
-          title='Log out' 
-          open={isOpen} 
-          icon={LogoutCurve} 
-          colorIcon="#dc1010"  
+        <LogoutButton
+          title="Log out"
+          open={isOpen}
+          icon={LogoutCurve}
+          colorIcon="#dc1010"
           // onConfirm={handleLogout}
         />
       </div>

@@ -19,14 +19,14 @@ export default function DashboardHeader() {
         <div className="text-black text-[35px] font-bold">Admin Maura</div>
       </div>
       <div className="flex items-center space-x-10">
-        <Periode/>
-        <Image 
-            src="/svg/e-mifda.svg" 
-            className="rounded-full w-15 h-15" 
-            alt="photo" 
-            width={60} 
-            height={60} 
-          />
+        <Periode />
+        <Image
+          src="/svg/e-mifda.svg"
+          className="rounded-full w-15 h-15"
+          alt="photo"
+          width={60}
+          height={60}
+        />
       </div>
     </div>
   );
