@@ -1,4 +1,5 @@
 "use client";
+import DashboardHeader from "@/components/organisms/DashboardHeader";
 import SideBar from "@/components/organisms/SideBar";
 
 export default function Layout({ children }) {
@@ -8,14 +9,14 @@ export default function Layout({ children }) {
       <aside className="bg-[#f2fffa]">
         <SideBar />
       </aside>
-      
+
       {/* Main area */}
       <div className="grid grid-rows-[auto_1fr]">
         {/* Header */}
         <header className="h-[145px] sticky top-0 z-10">
-          {/* <DashboardHeader /> */}
+          <DashboardHeader/>
         </header>
-        
+
         {/* Content */}
         <main className="bg-[#f9fffb] p-3 md:p-6 lg:p-10 overflow-auto">
           {children}
