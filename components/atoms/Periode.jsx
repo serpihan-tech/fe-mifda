@@ -1,5 +1,5 @@
-"use client"
-import { useState, useRef, useEffect } from 'react';
+"use client";
+import { useState, useRef, useEffect } from "react";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
@@ -7,18 +7,17 @@ const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-
 export default function Periode() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedPeriode, setSelectedPeriode] = useState('Periode 2024/2025');
+  const [selectedPeriode, setSelectedPeriode] = useState("Periode 2024/2025");
   const dropdownRef = useRef(null);
 
   const periodeOptions = [
-    'Periode 2024/2025',
-    'Periode 2023/2024',
-    'Periode 2022/2023',
-    'Periode 2021/2022',
-    'Periode 2020/2021'
+    "Periode 2024/2025",
+    "Periode 2023/2024",
+    "Periode 2022/2023",
+    "Periode 2021/2022",
+    "Periode 2020/2021",
   ];
 
   // Close dropdown when clicking outside
@@ -29,8 +28,8 @@ export default function Periode() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -43,7 +42,7 @@ export default function Periode() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 w-full bg-white rounded-[15px] shadow-lg overflow-hidden z-10">
+        <div className="absolute top-full mt-2 w-full bg-[#f9fbff] rounded-[15px] shadow-lg overflow-hidden z-10">
           {periodeOptions.map((periode, index) => (
             <button
               key={index}
@@ -51,8 +50,8 @@ export default function Periode() {
                 setSelectedPeriode(periode);
                 setIsOpen(false);
               }}
-              className={`${montserrat.className} w-full px-5 py-3 text-left text-lg font-medium hover:bg-[#146168] hover:text-white transition-colors
-                ${selectedPeriode === periode ? 'bg-[#146168] text-white' : 'text-gray-700'}`}
+              className={`${montserrat.className} w-full p-3 text-center text-lg font-semibold hover:bg-[#146168] hover:text-white transition-colors
+                text-[#146168]`}
             >
               {periode}
             </button>
@@ -61,4 +60,4 @@ export default function Periode() {
       )}
     </div>
   );
-};
+}

@@ -2,6 +2,7 @@
 
 import { Montserrat } from "next/font/google";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -11,6 +12,7 @@ const montserrat = Montserrat({
 // Komponen SidebarItem
 export default function SidebarItem({ title, icon: Icon, url }) {
   const router = useRouter();
+
   const handleClick = () => {
     if (url) {
       router.push(url);

@@ -24,11 +24,11 @@ const monserratItalic = localFont({
   weight: "100 900",
 });
 
-// const raleway = localFont({
-//   src: "./fonts/RalewayVF.woff",
-//   variable: "--font-raleway",
-//   weight: "100 900",
-// });
+const raleway = localFont({
+  src: "./fonts/RalewayVF.woff",
+  variable: "--font-raleway",
+  weight: "100 900",
+});
 
 const righteous = localFont({
   src: "./fonts/RighteousRegularVF.woff",
