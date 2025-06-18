@@ -3,6 +3,7 @@
 import StatisticChart from "@/components/organisms/StatisticChart";
 import InfoTotalCard from "@/components/organisms/InfoTotalCard";
 import StatusCard from "@/components/organisms/StatusCard";
+import TunggakanCard from "@/components/organisms/TunggakanCard";
 
 export default function dashboard() {
   return (
@@ -21,6 +22,7 @@ export default function dashboard() {
             <StatisticChart />
           </div>
           <div className="w-1/3">
+          <TunggakanCard/>
           </div>
         </div>
       </div>

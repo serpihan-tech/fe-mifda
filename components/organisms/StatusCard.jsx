@@ -73,9 +73,9 @@ export default function StatusCard() {
       <Image
         src="/svg/lantern.svg"
         alt=""
-        width={51}
+        width={52}
         height={42}
-        className="-left-2 -mt-2"
+        className="-left-2 -mt-1"
       />
     </CardShadow>
   );

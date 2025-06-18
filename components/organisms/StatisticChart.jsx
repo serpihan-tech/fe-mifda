@@ -60,27 +60,26 @@ export default function StatisticChart() {
   return (
     <CardShadow>
       <div className="px-10 py-7">
-        <div className="flex justify-between items-center mb-4">
-          <p className={`text-lg font-bold text-black`}>Grafik Pendaftaran</p>
-          <div className="flex gap-2"></div>
+        <div className="w-full flex justify-between">
+          <div className="text-[#146168] text-xl font-semibold">Grafik Pendaftaran</div>
+
+          <div className="flex gap-4 mb-4">
+            <div className="flex items-center gap-2.5">
+              <div className="w-2.5 h-2.5 bg-[#4A5568] rounded-full" />
+              <p className={`text-xs font-medium text-black`}>Pendaftar</p>
+            </div>
+            <div className="flex items-center gap-2.5">
+              <div className="w-2.5 h-2.5 bg-[#F6AD55] rounded-full" />
+              <p className={`text-xs font-medium text-black`}>Daftar Ulang</p>
+            </div>
+            <div className="flex items-center gap-2.5">
+              <div className="w-2.5 h-2.5 bg-[#E53E3E] rounded-full" />
+              <p className={`text-xs font-medium text-black`}>Aktif</p>
+            </div>
+          </div>
         </div>
 
-        <div className="flex gap-4 mb-4">
-          <div className="flex items-center gap-2.5">
-            <div className="w-2.5 h-2.5 bg-[#4A5568] rounded-full" />
-            <p className={`text-xs font-medium text-black`}>Pendaftar</p>
-          </div>
-          <div className="flex items-center gap-2.5">
-            <div className="w-2.5 h-2.5 bg-[#F6AD55] rounded-full" />
-            <p className={`text-xs font-medium text-black`}>Daftar Ulang</p>
-          </div>
-          <div className="flex items-center gap-2.5">
-            <div className="w-2.5 h-2.5 bg-[#E53E3E] rounded-full" />
-            <p className={`text-xs font-medium text-black`}>Aktif</p>
-          </div>
-        </div>
-
-        <div className="mixed-chart -ms-4">
+        <div className="mixed-chart -ms-4 mt-7">
           <Chart
             className="w-full"
             options={{
@@ -104,7 +103,7 @@ export default function StatisticChart() {
             }}
             series={chartSeries}
             type="line"
-            height={350}
+            height={280}
           />
         </div>
       </div>
