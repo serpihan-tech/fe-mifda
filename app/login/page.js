@@ -6,7 +6,7 @@ import Image from "next/image";
 import BannerBot from "@/public/images/banner-bottom.webp"
 import BannerTop from "@/public/images/banner-top.webp"
 import BannerHumans from "@/public/images/banner-humans.webp"
-import { Montserrat } from "next/font/google";
+import { Montserrat, Righteous } from "next/font/google";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 import {
@@ -19,6 +19,10 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+const righteous = Righteous({
+  subsets: ["latin"],
+  weight: ["400"],
+})
 
 export default function Page() {
   const stateOrientation = useMediaQuery({ query: "(orientation: portrait)" })
@@ -103,9 +107,9 @@ export default function Page() {
           </div>
         </div>
       ) : (
-        <div className="w-full h-full flex gap-4">
+        <div className="w-full h-full flex justify-center gap-4">
           <div className="absolute lg:relative top-0 left-0 z-1 w-[55%] h-full text-white flex-col hidden lg:flex">
-            <div>Selamat Datang</div>
+            <div className={`${righteous.className} text-4xl`}>Selamat Datang!</div>
             <div>Kelola semua administrasi & transaksi pondok pesantren dengan mudah dalam satu platform terpadu.</div>
             <div className="w-full bottom-0 left-0 absolute z-1 flex justify-center">
               <Image
