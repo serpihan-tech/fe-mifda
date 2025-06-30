@@ -60,9 +60,9 @@ export default function TunggakanCard() {
          color="#a2dcd9"
          className="h-1/5"
         />
-        <div className="text-center text-[#115157] text-lg font-medium mt-3 px-4">
+        <button className="w-full text-center text-[#115157] text-lg font-medium mt-3 px-4 flex justify-center items-center">
           Lihat Semua
-        </div>
+        </button>
       </div>
     </CardShadow>
   );

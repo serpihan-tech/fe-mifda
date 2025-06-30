@@ -35,15 +35,15 @@ export default function PemasukanCard() {
         Rp. 7.400.000
       </div>
       <hr color="#b1cacd" className="h-1/5" />
-      <div className="self-stretch px-8 pt-7 pb-5 flexjustify-between items-center">
-        <div className="flex px-5 py-2 self-stretch bg-[#f2fffa] rounded-[25px] shadow-[0px_0.5px_6px_0px_rgba(255,255,255,0.40)] justify-between items-center group">
+      <div className="self-stretch px-8 pt-7 pb-5 flex justify-between items-center">
+        <button className="w-full flex px-5 py-2 self-stretch bg-[#f2fffa] rounded-[25px] shadow-[0px_0.5px_6px_0px_rgba(255,255,255,0.40)] justify-between items-center group">
           <div className="text-[#146168] text-base font-semibold">
             Lihat Detail
           </div>
           <div className="bg-[#115157] rounded-full p-1">
             <ArrowRight size={24} color="#f9fbff" />
           </div>
-        </div>
+        </button>
       </div>
     </CardShadow>
   );

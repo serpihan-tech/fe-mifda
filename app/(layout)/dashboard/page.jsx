@@ -6,6 +6,7 @@ import StatusCard from "@/components/organisms/StatusCard";
 import TunggakanCard from "@/components/organisms/TunggakanCard";
 import PemasukanCard from "@/components/organisms/PemasukanCard";
 import PengeluaranCard from "@/components/organisms/PengeluaranCard";
+import PerizinanCard from "@/components/organisms/PerizinanCard";
 
 export default function dashboard() {
   return (
@@ -20,23 +21,24 @@ export default function dashboard() {
           </div>
         </div>
         <div className="w-full flex space-x-8">
-          <div className="w-2/3">
-            <StatisticChart/>
+          <div className="w-3/5">
+            <StatisticChart />
           </div>
-          <div className="w-1/3">
-            <TunggakanCard/>
+          <div className="w-2/5">
+            <TunggakanCard />
           </div>
         </div>
         <div className="w-full flex space-x-8">
-          <div className="w-2/3 space-x-8 flex">
+          <div className="w-3/5 space-x-8 flex">
             <div className="w-1/2">
-              <PemasukanCard/>
+              <PemasukanCard />
             </div>
             <div className="w-1/2">
-            <PengeluaranCard/>
+              <PengeluaranCard />
             </div>
           </div>
-          <div className="w-1/3">
+          <div className="w-2/5">
+            <PerizinanCard/>
           </div>
         </div>
       </div>
