@@ -1,5 +1,5 @@
 "use client"
-import { WalletAdd } from "iconsax-react"
+import { Image, DocumentText, WalletMoney } from "iconsax-react"
 import { Montserrat } from "next/font/google"
 import Table from "@/components/organisms/Table"
 import { useEffect, useState } from "react"
@@ -113,11 +113,18 @@ export default function Page() {
             componentAction = {[
               {
                 func: a,
-                icon: <WalletAdd />
+                icon: <Image />,
+                style: "bg-[#146168] rounded-full py-2 px-2 text-white"
               },
               {
                 func: b,
-                icon: <WalletAdd />
+                icon: <DocumentText />,
+                style: "bg-[#0B31DB] rounded-full py-2 px-2 text-white"
+              },
+              {
+                func: a,
+                icon: <WalletMoney />,
+                style: "bg-[#F49F0A] rounded-full py-2 px-2 text-white"
               }
             ]}
             /> :

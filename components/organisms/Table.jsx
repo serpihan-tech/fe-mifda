@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const entries = [10, 25, 50, 100];
 
@@ -79,11 +79,11 @@ export default function PemasukanTable(props) {
               }
               {
                 hasAction && (
-                  <td className="px-4 py-2 border">
+                  <td className="px-4 py-2 border flex flex-row gap-2 justify-center">
                     {componentAction.map((item) => {
-                      const { func, icon } = item
+                      const { func, icon, style} = item
                       return (
-                        <button onClick={() => func(dataRow)}>
+                        <button onClick={() => func(dataRow)} className={style ?`${style}`:'px-4 py-4 bg-black'}>
                           {icon}
                         </button>
                       )
