@@ -1,18 +1,18 @@
 "use client"
 
 import "@/app/globals.css";
-import { BarsArrowDown } from "@/components/icons/BarsArrowDown";
 import Image from "next/image";
 import BannerBot from "@/public/images/banner-bottom.webp"
 import BannerTop from "@/public/images/banner-top.webp"
 import BannerHumans from "@/public/images/banner-humans.webp"
 import { Montserrat, Righteous } from "next/font/google";
-import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 import {
   useState,
   useEffect
 } from "react";
+import { useForm } from "react-hook-form"
+import { useRouter } from "next/navigation";
 
 
 const montserrat = Montserrat({
@@ -25,12 +25,45 @@ const righteous = Righteous({
 })
 
 export default function Page() {
+  const router = useRouter();
   const stateOrientation = useMediaQuery({ query: "(orientation: portrait)" })
   const [isPortrait, setIsPortrait] = useState(null);
 
   useEffect(() => {
-    stateOrientation ? setIsPortrait(true) : setIsPortrait(false);
-  }, []);
+  stateOrientation ? setIsPortrait(true) : setIsPortrait(false);
+  }, [stateOrientation]);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+  const fetchUser = async (dataForm) => {
+    try {
+      const response = await fetch("data/users.json");
+      const data = await response.json();
+      const {
+        email,
+        password  
+      } = dataForm
+
+      for(let i = 0; i < data.length; i++) {
+        if(data[i].email === email && data[i].password === password) {
+          router.push("/dashboard");
+          return data[i];
+        }
+      }
+      throw new Error("User not found");
+    } catch (error) {
+      return error;
+    }
+  }
+
+  const onSubmit = async (data) => {
+    return await fetchUser(data);
+  };
 
   return (
     <div className={`${montserrat.className} w-full h-full bg-gradient-4-green py-8 px-4 md:px-8 md:py-16 lg:py-24 lg:px-16 flex flex-col justify-center items-center text-black`}>
@@ -40,8 +73,8 @@ export default function Page() {
         width={100}
         height={100}
         sizes="100vw"
-        priority={false}
         className="w-full object-cover bottom-0 left-0 absolute z-1"
+        priority
       />
       <Image
         src={BannerTop}
@@ -49,7 +82,6 @@ export default function Page() {
         width={100}
         height={100}
         sizes="100vw"
-        priority={false}
         className="w-full object-cover top-0 left-0 absolute z-1"
       />
       {isPortrait ? (
@@ -59,33 +91,35 @@ export default function Page() {
               <div className="text-2xl font-bold mb-2 md:text-4xl">Selamat Datang</div>
               <div className="font-medium md:text-lg">Silahkan login dengan akun anda miliki</div>
             </div>
-            <form className="flex flex-col justify-between w-full grow" action="">
+            <form className="flex flex-col justify-between w-full grow" onSubmit={handleSubmit(onSubmit)}>
               <div className="flex flex-col font-medium gap-2 md:gap-4">
                 <div className="flex flex-col-reverse gap">
                   <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    className="text-gray-300 border px-2 py-1 rounded text-sm md:px-4 md:py-2" placeholder="olivia@example.com" />
+                    className="text-gray-300 border px-2 py-1 rounded text-sm md:px-4 md:py-2" 
+                    placeholder="olivia@example.com"
+                    type="email"
+                    {...register("email")} 
+                  />
                   <label htmlFor="email" className="text-neutral-600 text-sm">Email</label>
                 </div>
                 <div className="flex flex-col-reverse gap">
                   <input
-                    type="password"
-                    name="password"
-                    id="password"
                     className="text-gray-300 border px-2 py-1 rounded text-sm"
-                    placeholder="********" />
+                    type="password"
+                    placeholder="Password"
+                    {...register("password")}
+                  />
                   <label htmlFor="password" className="text-neutral-600 text-sm">Password</label>
                 </div>
                 <div className="flex gap-2 w-full justify-end">
                   <input
-                    type="checkbox"
-                    name="remember-me"
-                    id="remember-me"
                     className="text-gray-300 border px-2 py-1 rounded text-sm"
+                    type="checkbox"
+                    id="remember-me"
+                    checked
                     value={true}
-                    checked />
+                    {...register("remember-me")}
+                  />
                   <label htmlFor="remember-me" className="text-neutral-600 text-xs">Remember Me?</label>
                 </div>
               </div>
@@ -118,7 +152,6 @@ export default function Page() {
                 width={100}
                 height={100}
                 sizes="100vh"
-                priority={false}
                 className="w-[40%] object-cover bottom-0 left-0"
               />
             </div>
@@ -129,33 +162,34 @@ export default function Page() {
                 <div className="text-2xl font-bold mb-2 md:text-4xl">Selamat Datang Landscape</div>
                 <div className="font-medium md:text-lg">Silahkan login dengan akun anda miliki</div>
               </div>
-              <form className="flex flex-col justify-between w-full grow" action="">
+              <form className="flex flex-col justify-between w-full grow" onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex flex-col font-medium gap-2 md:gap-4">
                   <div className="flex flex-col-reverse gap">
                     <input
-                      type="text"
-                      name="email"
-                      id="email"
-                      className="text-gray-300 border px-2 py-1 rounded text-sm md:px-4 md:py-2" placeholder="olivia@example.com" />
+                      className="text-gray-300 border px-2 py-1 rounded text-sm md:px-4 md:py-2" 
+                      placeholder="olivia@example.com"
+                      type="email"
+                      {...register("email")}
+                    />
                     <label htmlFor="email" className="text-neutral-600 text-sm">Email</label>
                   </div>
                   <div className="flex flex-col-reverse gap">
                     <input
-                      type="password"
-                      name="password"
-                      id="password"
                       className="text-gray-300 border px-2 py-1 rounded text-sm"
-                      placeholder="********" />
+                      placeholder="********" 
+                      type="password"
+                      {...register("password")}
+                    />
                     <label htmlFor="password" className="text-neutral-600 text-sm">Password</label>
                   </div>
                   <div className="flex gap-2 w-full justify-end">
                     <input
-                      type="checkbox"
-                      name="remember-me"
-                      id="remember-me"
                       className="text-gray-300 border px-2 py-1 rounded text-sm"
                       value={true}
-                      checked />
+                      type="checkbox"
+                      {...register("remember-me")}
+                      checked 
+                    />
                     <label htmlFor="remember-me" className="text-neutral-600 text-xs">Remember Me?</label>
                   </div>
                 </div>
