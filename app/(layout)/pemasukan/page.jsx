@@ -1,9 +1,9 @@
 "use client"
 import { WalletAdd } from "iconsax-react"
 import { Montserrat } from "next/font/google"
-import PemasukanTable from "@/components/organisms/PemasukanTable"
+import Table from "@/components/organisms/Table"
 import { useEffect, useState } from "react"
-import PemasukanCard from "@/components/organisms/PemasukanCard"
+import PemasukanCard from "@/components/organisms/Card"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -44,6 +44,13 @@ export default function Page() {
       })
   }, [])
 
+  const a = async(hasil) => {
+    console.log(hasil)
+  }
+  const b = async(hasil) => {
+    console.log(hasil)
+  }
+
   return (
     <div className="text-black flex-grow">
       {/* Cards Layout */}
@@ -55,13 +62,13 @@ export default function Page() {
               return (
                 <PemasukanCard key={index} data={item} />
               )
-            }) : 
+            }) :
             (
-            <>
-              <PemasukanCard />
-              <PemasukanCard />
-              <PemasukanCard />
-            </>
+              <>
+                <PemasukanCard />
+                <PemasukanCard />
+                <PemasukanCard />
+              </>
             )
         }
       </div>
@@ -72,8 +79,49 @@ export default function Page() {
 
       {
         dataPemasukanTable.status ?
-          <PemasukanTable data={dataPemasukanTable.result} /> :
-          <PemasukanTable />
+          <Table
+            data={dataPemasukanTable.result}
+            columns={
+              [
+                {
+                  key: "id",
+                  label: "No",
+                },
+                {
+                  key: "nama_pj",
+                  label: "Nama PJ",
+                },
+                {
+                  key: "tanggal",
+                  label: "Tanggal",
+                },
+                {
+                  key: "nominal",
+                  label: "Nominal",
+                },
+                {
+                  key: "rekening",
+                  label: "Rekening",
+                },
+                {
+                  key: "petugas",
+                  label: "Petugas",
+                }
+              ]
+            }
+            hasAction = {true}
+            componentAction = {[
+              {
+                func: a,
+                icon: <WalletAdd />
+              },
+              {
+                func: b,
+                icon: <WalletAdd />
+              }
+            ]}
+            /> :
+          <Table />
       }
     </div>
   )

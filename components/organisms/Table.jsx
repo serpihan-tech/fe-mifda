@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 const entries = [10, 25, 50, 100];
 
 export default function PemasukanTable(props) {
-  const { data } = props;
+  const {
+    data, // Data yang akan ditampilkan hasil result dari JSON
+    columns, // Kolom-kolom yang akan ditampilkan {key, label}
+    hasAction, // Apakah ada Column action
+    componentAction, // Fungsi yang akan dijalankan ketika tombol action di klik {function, icon, color}
+  } = props;
   const [search, setSearch] = useState('');
   const [showEntries, setShowEntries] = useState(10);
 
@@ -46,30 +51,49 @@ export default function PemasukanTable(props) {
         <table className="w-full bg-white text-sm text-left border">
           <thead className="bg-gray-100 text-gray-700">
             <tr>
-              <th className="px-4 py-2 border">No</th>
-              <th className="px-4 py-2 border">Nama PJ</th>
-              <th className="px-4 py-2 border">Tanggal</th>
-              <th className="px-4 py-2 border">Nominal</th>
-              <th className="px-4 py-2 border">Rekening</th>
-              <th className="px-4 py-2 border">Petugas</th>
+              {
+                columns?.map((column) => (
+                  <th key={column.key} className="px-4 py-2 border">
+                    {column.label}
+                  </th>
+                ))
+              }
+              {hasAction && (
+                <th className="px-4 py-2 border">Action</th>
+              )}
             </tr>
           </thead>
           <tbody>
-            {visibleData?.map((item, index) => (
-              <tr key={item.id} className="hover:bg-gray-50 transition-all border-b">
-                <td className="px-4 py-2 border">{index + 1}</td>
-                <td className="px-4 py-2 border font-medium">{item.nama_pj}</td>
-                <td className="px-4 py-2 border">{item.tanggal}</td>
-                <td className="px-4 py-2 border text-right">
-                  {item.nominal.toLocaleString('id-ID', {
-                    style: 'currency',
-                    currency: 'IDR',
-                  })}
-                </td>
-                <td className="px-4 py-2 border capitalize">{item.rekening}</td>
-                <td className="px-4 py-2 border">{item.petugas}</td>
-              </tr>
-            ))}
+            {visibleData?.map((item, index) => {
+              const dataRow = item
+              return <tr key={item.id} className="hover:bg-gray-50 transition-all border-b">
+              {
+                columns?.map((column) => (
+                  <>
+                  <td key={column.key} className="px-4 py-2 border">
+                    {item[String(column.key)]}
+                  </td>
+                  
+                  </>
+                ))
+              }
+              {
+                hasAction && (
+                  <td className="px-4 py-2 border">
+                    {componentAction.map((item) => {
+                      const { func, icon } = item
+                      return (
+                        <button onClick={() => func(dataRow)}>
+                          {icon}
+                        </button>
+                      )
+                    })}
+                  </td>
+                )
+              }
+            </tr>
+            }
+            )}
             {visibleData?.length === 0 && (
               <tr>
                 <td colSpan={6} className="text-center py-4 text-gray-500 italic">
