@@ -1,0 +1,26 @@
+[
+  {
+    "tingkat": "TS",
+    "rekap": {
+      "putra": 112,
+      "putri": 94,
+      "total": 206
+    }
+  },
+  {
+    "tingkat": "SMP",
+    "rekap": {
+      "putra": 87,
+      "putri": 103,
+      "total": 190
+    }
+  },
+  {
+    "tingkat": "SMK",
+    "rekap": {
+      "putra": 123,
+      "putri": 78,
+      "total": 201
+    }
+  }
+]
