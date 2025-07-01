@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       </aside>
 
       {/* Main area */}
-      <div className="grid grid-rows-[auto_1fr]">
+      <div className="grid grid-rows-[auto_1fr] h-screen">
         {/* Header */}
         <header className="h-[145px] sticky top-0 z-10">
           <DashboardHeader/>

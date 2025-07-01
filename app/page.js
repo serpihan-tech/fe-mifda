@@ -5,7 +5,7 @@ import { NavigationMain } from "@/components/organisms/Navigation";
 
 export default function Home() {
   return (
-    <div className="w-full h-full max-w-[1920px] mx-auto">
+    <div className="w-full h-full">
       {/* Header Start */}
       <NavigationMain/>
       {/* Header End */}
