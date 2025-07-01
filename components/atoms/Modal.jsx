@@ -1,7 +1,6 @@
-"use client";
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
-import MyDocument from '../molecules/MyDocument';
+import dynamic from 'next/dynamic';
 
 
 export default function Modal({ onClose }) {
@@ -12,6 +11,7 @@ export default function Modal({ onClose }) {
         <button onClick={onClose}>Close</button>
       </div>
       <div>
+        <MyPDFViewer />
       </div>
     </div>,
     document.body

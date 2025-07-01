@@ -1,41 +1,4 @@
-import localFont from "next/font/local";
 import "./globals.css";
-import { Inter, rale } from "next/font/google";
-import { Icon } from "iconsax-react";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-const monserrat = localFont({
-  src: "./fonts/MontserratVF.woff",
-  variable: "--font-montserrat",
-  weight: "100 900",
-});
-
-const monserratItalic = localFont({
-  src: "./fonts/MontserratItalicVF.woff",
-  variable: "--font-montserrat-italic",
-  weight: "100 900",
-});
-
-const raleway = localFont({
-  src: "./fonts/RalewayVF.woff",
-  variable: "--font-raleway",
-  weight: "100 900",
-});
-
-const righteous = localFont({
-  src: "./fonts/RighteousRegularVF.woff",
-  variable: "--font-righteous",
-});
 
 export const metadata = {
   title: "e-mifda",
@@ -47,7 +10,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${righteous.variable}`}
         style={{
           height: "100vh",
           width: "100vw",
