@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { usePdfViewer } from '@/stores/userPdfViewer';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
@@ -10,12 +9,40 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.vers
 
 export default function MyPDFViewer() {
   const [numPages, setNumPages] = useState(null);
-  const { pageNumber, scrollRef } = usePdfViewer(numPages);
+  const [ pageNumber, setPageNumber ] = useState(1);
+  const containerRef = useRef(null);
+  const pageRefs = useRef([]);
+
+  const handleObserve = (entries) => {
+    const visiblePages = entries
+      .filter(entry => entry.isIntersecting && entry.intersectionRatio > 0.5)
+      .map(entry => Number(entry.target.getAttribute('data-page')));
+
+    if (visiblePages.length > 0) {
+      const topMost = Math.min(...visiblePages);
+      setPageNumber(topMost);
+    }
+  };
+
+  useEffect(() => {
+    if (!numPages) return;
+
+    const observer = new IntersectionObserver(handleObserve, {
+      root: containerRef.current,
+      threshold: 0.51,
+    });
+
+    pageRefs.current.forEach(el => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [numPages]);
 
   return (
     <div className="max-w-fit mx-auto">
       <div
-        ref={scrollRef}
+        ref={containerRef}
         className="h-[80vh] overflow-y-scroll border rounded shadow"
       >
         <Document
@@ -24,7 +51,13 @@ export default function MyPDFViewer() {
         >
           {numPages ? (
             Array.from({ length: numPages }, (_, index) => (
-              <Page key={index} pageNumber={index + 1} />
+              <div
+                key={index}
+                ref={(el) => (pageRefs.current[index] = el)}
+                data-page={index + 1}
+              >
+                <Page pageNumber={index + 1} />
+              </div>
             ))
           ) : (
             <p className="text-center py-4">Loading pages...</p>
