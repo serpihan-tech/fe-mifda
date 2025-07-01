@@ -3,7 +3,9 @@
 import Button from "@/components/atoms/Button";
 import dynamic from 'next/dynamic';
 import { NavigationMain } from "@/components/organisms/Navigation";
-import MyPDFViewer from "@/components/molecules/MyPDFViewer";
+// import MyPDFViewer from "@/components/molecules/MyPDFViewer";
+
+const MyPDFViewer = dynamic(() => import('@/components/molecules/MyPDFViewer'), { ssr: false });
 
 export default function Home() {
   return (

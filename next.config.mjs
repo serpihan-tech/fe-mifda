@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverActions: false,
-  },
-  webpack(config) {
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      canvas: false, // ⛔️ abaikan modul ini di browser
-    };
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        canvas: false,
+      };
+    }
     return config;
   },
 };
