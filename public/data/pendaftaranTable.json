@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "nama": "Balidin Dongoran, S.T.",
+    "L/P": "L",
+    "nomor_telp": "+62-0321-819-6001",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 2,
+    "nama": "Daruna Mayasari",
+    "L/P": "P",
+    "nomor_telp": "+62-83-863-7940",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 3,
+    "nama": "KH. Capa Anggraini, S.Psi",
+    "L/P": "L",
+    "nomor_telp": "+62 (0235) 116 1559",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 4,
+    "nama": "Yani Gunawan",
+    "L/P": "L",
+    "nomor_telp": "(0816) 184 9593",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 5,
+    "nama": "Betania Gunawan, S.H.",
+    "L/P": "L",
+    "nomor_telp": "+62 (0131) 647-5255",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 6,
+    "nama": "Mumpuni Santoso",
+    "L/P": "P",
+    "nomor_telp": "+62 (092) 832 7648",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 7,
+    "nama": "Mahdi Simbolon",
+    "L/P": "L",
+    "nomor_telp": "+62-030-564-1395",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 8,
+    "nama": "Marwata Mandasari",
+    "L/P": "L",
+    "nomor_telp": "(072) 423 8849",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 9,
+    "nama": "Restu Wacana",
+    "L/P": "L",
+    "nomor_telp": "+62 (328) 710-1226",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 10,
+    "nama": "Puti Kiandra Wibowo",
+    "L/P": "L",
+    "nomor_telp": "(0848) 018 4514",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 11,
+    "nama": "Endah Hasanah",
+    "L/P": "P",
+    "nomor_telp": "+62-48-281-4893",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 12,
+    "nama": "Hardi Marpaung",
+    "L/P": "P",
+    "nomor_telp": "0880957015",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 13,
+    "nama": "Tgk. Halima Hakim, S.H.",
+    "L/P": "P",
+    "nomor_telp": "+62 (017) 182 2782",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 14,
+    "nama": "Paris Sudiati",
+    "L/P": "L",
+    "nomor_telp": "(038) 346-5787",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 15,
+    "nama": "Dirja Prasetyo",
+    "L/P": "P",
+    "nomor_telp": "+62 (050) 983 9301",
+    "status": "Draft"
+  },
+  {
+    "id": 16,
+    "nama": "Siti Halim, S.H.",
+    "L/P": "P",
+    "nomor_telp": "+62 (005) 183 4738",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 17,
+    "nama": "Nyoman Pertiwi",
+    "L/P": "L",
+    "nomor_telp": "(0376) 311-6566",
+    "status": "Draft"
+  },
+  {
+    "id": 18,
+    "nama": "Zelaya Habibi",
+    "L/P": "L",
+    "nomor_telp": "+62 (006) 513-3387",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 19,
+    "nama": "Indra Najmudin",
+    "L/P": "P",
+    "nomor_telp": "+62 (0731) 781 0801",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 20,
+    "nama": "Sutan Caturangga Wasita, M.Kom.",
+    "L/P": "P",
+    "nomor_telp": "(0360) 260-6474",
+    "status": "Draft"
+  },
+  {
+    "id": 21,
+    "nama": "Tami Puspita",
+    "L/P": "P",
+    "nomor_telp": "(0234) 309-8050",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 22,
+    "nama": "Lanang Kuswandari",
+    "L/P": "P",
+    "nomor_telp": "088 208 1219",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 23,
+    "nama": "Mursita Prakasa",
+    "L/P": "L",
+    "nomor_telp": "(019) 399 0916",
+    "status": "Draft"
+  },
+  {
+    "id": 24,
+    "nama": "Lamar Pratiwi, M.TI.",
+    "L/P": "L",
+    "nomor_telp": "+62 (435) 346 2475",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 25,
+    "nama": "R. Adika Haryanti, M.Ak",
+    "L/P": "P",
+    "nomor_telp": "+62 (018) 384-2513",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 26,
+    "nama": "Intan Manullang",
+    "L/P": "P",
+    "nomor_telp": "(0849) 808 4124",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 27,
+    "nama": "Tirtayasa Kurniawan",
+    "L/P": "L",
+    "nomor_telp": "0824493534",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 28,
+    "nama": "drg. Dwi Habibi",
+    "L/P": "L",
+    "nomor_telp": "+62 (064) 005 2427",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 29,
+    "nama": "H. Irsad Purwanti",
+    "L/P": "L",
+    "nomor_telp": "+62-11-280-5982",
+    "status": "Draft"
+  },
+  {
+    "id": 30,
+    "nama": "Dian Gunarto",
+    "L/P": "L",
+    "nomor_telp": "+62 (0505) 331-5869",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 31,
+    "nama": "Eva Prakasa, S.E.",
+    "L/P": "L",
+    "nomor_telp": "+62 (60) 256-3421",
+    "status": "Draft"
+  },
+  {
+    "id": 32,
+    "nama": "Ani Halimah",
+    "L/P": "P",
+    "nomor_telp": "+62-0375-433-0365",
+    "status": "Draft"
+  },
+  {
+    "id": 33,
+    "nama": "Zelaya Hidayat",
+    "L/P": "P",
+    "nomor_telp": "+62 (0586) 850 1429",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 34,
+    "nama": "Ani Kurniawan",
+    "L/P": "P",
+    "nomor_telp": "(055) 698-1693",
+    "status": "Draft"
+  },
+  {
+    "id": 35,
+    "nama": "Aurora Fujiati",
+    "L/P": "L",
+    "nomor_telp": "+62-88-356-1595",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 36,
+    "nama": "Samsul Maheswara, S.Pd",
+    "L/P": "P",
+    "nomor_telp": "084 656 4823",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 37,
+    "nama": "Salwa Wibowo",
+    "L/P": "L",
+    "nomor_telp": "+62 (99) 468-0443",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 38,
+    "nama": "Winda Prastuti",
+    "L/P": "L",
+    "nomor_telp": "+62 (777) 387 2148",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 39,
+    "nama": "Mahesa Safitri, S.Psi",
+    "L/P": "L",
+    "nomor_telp": "+62 (034) 332 0037",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 40,
+    "nama": "Puti Mutia Agustina",
+    "L/P": "P",
+    "nomor_telp": "+62-676-320-1632",
+    "status": "Draft"
+  },
+  {
+    "id": 41,
+    "nama": "H. Karja Hariyah, S.Gz",
+    "L/P": "P",
+    "nomor_telp": "0831727889",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 42,
+    "nama": "Usyi Handayani",
+    "L/P": "L",
+    "nomor_telp": "086 872 7743",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 43,
+    "nama": "Hj. Ika Nurdiyanti, M.Kom.",
+    "L/P": "P",
+    "nomor_telp": "+62-0471-434-5581",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 44,
+    "nama": "Cakrawangsa Pradipta",
+    "L/P": "L",
+    "nomor_telp": "(023) 166 5876",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 45,
+    "nama": "Danang Andriani",
+    "L/P": "P",
+    "nomor_telp": "(090) 967 0546",
+    "status": "Draft"
+  },
+  {
+    "id": 46,
+    "nama": "drg. Paulin Palastri, M.Ak",
+    "L/P": "P",
+    "nomor_telp": "+62-0734-670-6562",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 47,
+    "nama": "Dr. Dian Oktaviani, M.Pd",
+    "L/P": "L",
+    "nomor_telp": "+62-69-901-6272",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 48,
+    "nama": "Elon Wibowo",
+    "L/P": "P",
+    "nomor_telp": "+62 (375) 564 6417",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 49,
+    "nama": "Pangestu Namaga",
+    "L/P": "P",
+    "nomor_telp": "+62-053-100-3309",
+    "status": "Draft"
+  },
+  {
+    "id": 50,
+    "nama": "Digdaya Mahendra",
+    "L/P": "P",
+    "nomor_telp": "(0193) 745-2991",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 51,
+    "nama": "R.M. Yoga Saragih, S.IP",
+    "L/P": "P",
+    "nomor_telp": "+62-49-663-1931",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 52,
+    "nama": "Vera Sihombing, M.Ak",
+    "L/P": "L",
+    "nomor_telp": "+62 (090) 586-5185",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 53,
+    "nama": "Samsul Andriani",
+    "L/P": "P",
+    "nomor_telp": "(0165) 726-2849",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 54,
+    "nama": "Dr. Prayitna Laksmiwati, M.M.",
+    "L/P": "P",
+    "nomor_telp": "(094) 531-4737",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 55,
+    "nama": "Ir. Salsabila Wibowo",
+    "L/P": "P",
+    "nomor_telp": "+62 (075) 273 5454",
+    "status": "Draft"
+  },
+  {
+    "id": 56,
+    "nama": "Tgk. Puti Anggriawan",
+    "L/P": "L",
+    "nomor_telp": "083 136 7837",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 57,
+    "nama": "Narji Lestari, M.M.",
+    "L/P": "P",
+    "nomor_telp": "+62-14-363-4957",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 58,
+    "nama": "Dr. Gangsar Anggraini",
+    "L/P": "L",
+    "nomor_telp": "0855744431",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 59,
+    "nama": "Febi Sihotang, S.IP",
+    "L/P": "L",
+    "nomor_telp": "0823374989",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 60,
+    "nama": "Cinthia Nababan",
+    "L/P": "L",
+    "nomor_telp": "+62 (0352) 408-2400",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 61,
+    "nama": "T. Nalar Mahendra",
+    "L/P": "P",
+    "nomor_telp": "(0109) 477-7520",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 62,
+    "nama": "Zelda Kuswandari",
+    "L/P": "L",
+    "nomor_telp": "+62 (016) 719-0229",
+    "status": "Draft"
+  },
+  {
+    "id": 63,
+    "nama": "Chelsea Prayoga",
+    "L/P": "P",
+    "nomor_telp": "+62 (086) 999-3867",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 64,
+    "nama": "Ifa Rahmawati",
+    "L/P": "P",
+    "nomor_telp": "(049) 909-1334",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 65,
+    "nama": "Bajragin Manullang, S.H.",
+    "L/P": "P",
+    "nomor_telp": "+62 (81) 206-7974",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 66,
+    "nama": "Daru Suwarno",
+    "L/P": "L",
+    "nomor_telp": "+62 (0713) 493-6183",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 67,
+    "nama": "Cakrawala Santoso, S.E.I",
+    "L/P": "L",
+    "nomor_telp": "+62 (002) 499 4717",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 68,
+    "nama": "Ilsa Waskita, S.T.",
+    "L/P": "P",
+    "nomor_telp": "088 771 9065",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 69,
+    "nama": "Tgk. Aisyah Iswahyudi",
+    "L/P": "P",
+    "nomor_telp": "+62-0990-490-2787",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 70,
+    "nama": "Elvina Padmasari",
+    "L/P": "P",
+    "nomor_telp": "(071) 756-5512",
+    "status": "Draft"
+  },
+  {
+    "id": 71,
+    "nama": "Laras Lailasari",
+    "L/P": "L",
+    "nomor_telp": "+62 (0680) 715-4516",
+    "status": "Draft"
+  },
+  {
+    "id": 72,
+    "nama": "Drs. Yunita Adriansyah, M.Pd",
+    "L/P": "L",
+    "nomor_telp": "(0603) 859 7703",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 73,
+    "nama": "Pia Mustofa",
+    "L/P": "P",
+    "nomor_telp": "+62 (0771) 093-2480",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 74,
+    "nama": "dr. Bakiman Prasetyo",
+    "L/P": "L",
+    "nomor_telp": "+62 (071) 274-8467",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 75,
+    "nama": "Hesti Hasanah",
+    "L/P": "L",
+    "nomor_telp": "0826398214",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 76,
+    "nama": "KH. Sabar Agustina, S.Psi",
+    "L/P": "P",
+    "nomor_telp": "084 044 9972",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 77,
+    "nama": "Paulin Laksmiwati",
+    "L/P": "L",
+    "nomor_telp": "+62 (588) 675-3396",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 78,
+    "nama": "Sabri Zulkarnain",
+    "L/P": "P",
+    "nomor_telp": "+62-057-662-7028",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 79,
+    "nama": "dr. Cinthia Farida",
+    "L/P": "L",
+    "nomor_telp": "+62 (087) 026-2174",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 80,
+    "nama": "Sarah Widodo",
+    "L/P": "P",
+    "nomor_telp": "+62 (058) 657 8091",
+    "status": "Draft"
+  },
+  {
+    "id": 81,
+    "nama": "Laswi Suwarno",
+    "L/P": "L",
+    "nomor_telp": "+62-0161-172-4005",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 82,
+    "nama": "Dt. Emil Tamba, S.I.Kom",
+    "L/P": "P",
+    "nomor_telp": "(023) 869-2221",
+    "status": "Draft"
+  },
+  {
+    "id": 83,
+    "nama": "drg. Raina Zulaika",
+    "L/P": "L",
+    "nomor_telp": "+62-0792-374-7407",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 84,
+    "nama": "Shania Palastri",
+    "L/P": "L",
+    "nomor_telp": "+62 (17) 594-6474",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 85,
+    "nama": "Harjo Laksmiwati",
+    "L/P": "L",
+    "nomor_telp": "+62 (036) 959-4406",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 86,
+    "nama": "Ajeng Pratiwi",
+    "L/P": "P",
+    "nomor_telp": "+62-097-439-5339",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 87,
+    "nama": "Shania Wahyuni",
+    "L/P": "L",
+    "nomor_telp": "+62 (10) 470 9521",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 88,
+    "nama": "Jane Agustina",
+    "L/P": "P",
+    "nomor_telp": "+62 (32) 858-8424",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 89,
+    "nama": "Dr. Yani Sihombing, S.Psi",
+    "L/P": "L",
+    "nomor_telp": "+62 (071) 236-8516",
+    "status": "Draft"
+  },
+  {
+    "id": 90,
+    "nama": "Eman Nasyiah",
+    "L/P": "P",
+    "nomor_telp": "+62 (075) 496-5137",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 91,
+    "nama": "Lukman Purwanti",
+    "L/P": "L",
+    "nomor_telp": "+62 (931) 746 1200",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 92,
+    "nama": "Nilam Latupono",
+    "L/P": "P",
+    "nomor_telp": "+62 (038) 267-5869",
+    "status": "Draft"
+  },
+  {
+    "id": 93,
+    "nama": "Titi Mangunsong, S.Farm",
+    "L/P": "P",
+    "nomor_telp": "+62 (079) 640-5377",
+    "status": "Draft"
+  },
+  {
+    "id": 94,
+    "nama": "Sabar Tarihoran",
+    "L/P": "P",
+    "nomor_telp": "+62 (058) 506-4317",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 95,
+    "nama": "Mujur Prabowo",
+    "L/P": "L",
+    "nomor_telp": "+62-05-329-3183",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 96,
+    "nama": "R.A. Yulia Pradipta",
+    "L/P": "L",
+    "nomor_telp": "+62 (290) 422 8421",
+    "status": "Draft"
+  },
+  {
+    "id": 97,
+    "nama": "Sakti Dongoran, S.E.I",
+    "L/P": "L",
+    "nomor_telp": "+62-53-950-2402",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 98,
+    "nama": "Lili Novitasari, S.IP",
+    "L/P": "L",
+    "nomor_telp": "+62 (077) 589 1783",
+    "status": "Daftar Ulang"
+  },
+  {
+    "id": 99,
+    "nama": "Cut Titi Wahyuni",
+    "L/P": "L",
+    "nomor_telp": "084 700 7661",
+    "status": "Terdaftar"
+  },
+  {
+    "id": 100,
+    "nama": "Tania Handayani",
+    "L/P": "L",
+    "nomor_telp": "+62 (015) 921 2499",
+    "status": "Daftar Ulang"
+  }
+]
