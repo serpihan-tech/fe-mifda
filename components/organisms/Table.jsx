@@ -1,6 +1,28 @@
 import React, { useRef, useState } from 'react';
+import { ArrowDown3, ArrowUp3, Sort } from 'iconsax-react';
 
 const entries = [10, 25, 50, 100];
+
+function TableHeader({ children }) {
+  const [sortOrder, setSortOrder] = useState('');
+
+  const sortCommand = () => {
+    setSortOrder(
+      sortOrder === '' ? 'asc' : sortOrder === 'asc' ? 'desc' : ''
+    );
+  }
+return (
+  <th className='text-center'>
+    <div className='w-full flex items-center justify-between px-2 py-1'>
+      {children}
+      <button className='ml-2' onClick={() => { sortCommand() }}>
+        {sortOrder === '' ? <Sort /> : sortOrder === 'asc' ? <ArrowUp3 /> : <ArrowDown3 />}
+      </button>
+    </div>
+  </th>
+)
+}
+
 
 export default function PemasukanTable(props) {
   const {
@@ -53,9 +75,9 @@ export default function PemasukanTable(props) {
             <tr>
               {
                 columns?.map((column) => (
-                  <th key={column.key} className="px-4 py-2 border">
+                  <TableHeader key={column.key} >
                     {column.label}
-                  </th>
+                  </TableHeader>
                 ))
               }
               {hasAction && (
@@ -67,31 +89,30 @@ export default function PemasukanTable(props) {
             {visibleData?.map((item, index) => {
               const dataRow = item
               return <tr key={item.id} className="hover:bg-gray-50 transition-all border-b">
-              {
-                columns?.map((column) => (
-                  <>
-                  <td key={column.key} className="px-4 py-2 border">
-                    {item[String(column.key)]}
-                  </td>
-                  
-                  </>
-                ))
-              }
-              {
-                hasAction && (
-                  <td className="px-4 py-2 border flex flex-row gap-2 justify-center">
-                    {componentAction.map((item) => {
-                      const { func, icon, style} = item
-                      return (
-                        <button onClick={() => func(dataRow)} className={style ?`${style}`:'px-4 py-4 bg-black'}>
-                          {icon}
-                        </button>
-                      )
-                    })}
-                  </td>
-                )
-              }
-            </tr>
+                {
+                  columns?.map((column) => (
+                    <>
+                      <td key={column.key} className="px-4 py-2 border">
+                        {item[String(column.key)]}
+                      </td>
+                    </>
+                  ))
+                }
+                {
+                  hasAction && (
+                    <td className="px-4 py-2 border flex flex-row gap-2 justify-center">
+                      {componentAction.map((item) => {
+                        const { func, icon, style } = item
+                        return (
+                          <button onClick={() => func(dataRow)} className={style ? `${style}` : 'px-4 py-4 bg-black'}>
+                            {icon}
+                          </button>
+                        )
+                      })}
+                    </td>
+                  )
+                }
+              </tr>
             }
             )}
             {visibleData?.length === 0 && (

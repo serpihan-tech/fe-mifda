@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google"
 import Table from "@/components/organisms/Table"
 import { useEffect, useState } from "react"
 import PemasukanCard from "@/components/organisms/Card"
+import Text from "@/components/atoms/Text"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -72,11 +73,7 @@ export default function Page() {
             )
         }
       </div>
-
-      <div>
-        Data Pemasukan Pondok Pesantren
-      </div>
-
+      <Text className="font-semibold">Data Pemasukan Pondok Pesantren</Text>
       {
         dataPemasukanTable.status ?
           <Table
