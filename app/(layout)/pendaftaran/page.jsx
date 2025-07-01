@@ -1,9 +1,9 @@
 "use client"
 import { WalletAdd } from "iconsax-react"
 import { Montserrat } from "next/font/google"
-import PemasukanTable from "@/components/organisms/PemasukanTable"
+import PemasukanTable from "@/components/organisms/Table"
 import { useEffect, useState } from "react"
-import PemasukanCard from "@/components/organisms/PemasukanCard"
+import PemasukanCard from "@/components/organisms/Card"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
