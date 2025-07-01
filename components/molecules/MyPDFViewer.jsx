@@ -9,41 +9,49 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.vers
 
 export default function MyPDFViewer() {
   const [numPages, setNumPages] = useState(null);
-  const [ pageNumber, setPageNumber ] = useState(1);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [pageNumber, setPageNumber] = useState(1);
   const containerRef = useRef(null);
   const pageRefs = useRef([]);
 
-  const handleObserve = (entries) => {
-    const visiblePages = entries
-      .filter(entry => entry.isIntersecting && entry.intersectionRatio > 0.5)
-      .map(entry => Number(entry.target.getAttribute('data-page')));
+  // 🔄 Update lebar container
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
 
-    if (visiblePages.length > 0) {
-      const topMost = Math.min(...visiblePages);
-      setPageNumber(topMost);
-    }
-  };
-
+  // 👁️ Deteksi halaman aktif pakai IntersectionObserver
   useEffect(() => {
     if (!numPages) return;
 
-    const observer = new IntersectionObserver(handleObserve, {
+    const observer = new IntersectionObserver((entries) => {
+      const visiblePages = entries
+        .filter(entry => entry.isIntersecting && entry.intersectionRatio > 0.5)
+        .map(entry => Number(entry.target.getAttribute('data-page')));
+      if (visiblePages.length > 0) {
+        const current = Math.min(...visiblePages);
+        setPageNumber(current);
+      }
+    }, {
       root: containerRef.current,
       threshold: 0.51,
     });
 
-    pageRefs.current.forEach(el => {
-      if (el) observer.observe(el);
-    });
-
+    pageRefs.current.forEach(el => el && observer.observe(el));
     return () => observer.disconnect();
-  }, [numPages]);
+  }, [numPages, setPageNumber]);
 
   return (
-    <div className="max-w-fit mx-auto">
+    <div className="w-full max-w-[50vw] mx-auto">
       <div
         ref={containerRef}
-        className="h-[80vh] overflow-y-scroll border rounded shadow"
+        className="h-[80vh] overflow-y-scroll overflow-x-hidden border rounded shadow"
       >
         <Document
           file="/storage/pdf/003.pdf"
@@ -53,10 +61,17 @@ export default function MyPDFViewer() {
             Array.from({ length: numPages }, (_, index) => (
               <div
                 key={index}
-                ref={(el) => (pageRefs.current[index] = el)}
+                ref={el => pageRefs.current[index] = el}
                 data-page={index + 1}
               >
-                <Page pageNumber={index + 1} />
+                <Page
+                  pageNumber={index + 1}
+                  width={containerWidth}
+                  onRenderSuccess={(page) => {
+                    const { width, height } = page;
+                    console.log(`Ukuran halaman ${index + 1}:`, width, height);
+                  }}
+                />
               </div>
             ))
           ) : (
