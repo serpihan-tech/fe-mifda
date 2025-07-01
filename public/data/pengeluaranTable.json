@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "nama_pj": "Ujang",
+    "tanggal": "2023-01-01",
+    "nominal": 950000,
+    "rekening": "Listrik",
+    "petugas": "Audy"
+  },
+  {
+    "id": 2,
+    "nama_pj": "Yulia",
+    "tanggal": "2023-01-02",
+    "nominal": 1100000,
+    "rekening": "Air",
+    "petugas": "Budi"
+  },
+  {
+    "id": 3,
+    "nama_pj": "Tono",
+    "tanggal": "2023-01-03",
+    "nominal": 870000,
+    "rekening": "Perlengkapan",
+    "petugas": "Citra"
+  },
+  {
+    "id": 4,
+    "nama_pj": "Ani",
+    "tanggal": "2023-01-04",
+    "nominal": 1020000,
+    "rekening": "Kesehatan",
+    "petugas": "Dina"
+  },
+  {
+    "id": 5,
+    "nama_pj": "Bagus",
+    "tanggal": "2023-01-05",
+    "nominal": 1200000,
+    "rekening": "Perbaikan",
+    "petugas": "Eko"
+  },
+  {
+    "id": 6,
+    "nama_pj": "Sinta",
+    "tanggal": "2023-01-06",
+    "nominal": 780000,
+    "rekening": "Internet",
+    "petugas": "Fajar"
+  },
+  {
+    "id": 7,
+    "nama_pj": "Hana",
+    "tanggal": "2023-01-07",
+    "nominal": 650000,
+    "rekening": "Kebersihan",
+    "petugas": "Gina"
+  },
+  {
+    "id": 8,
+    "nama_pj": "Rio",
+    "tanggal": "2023-01-08",
+    "nominal": 890000,
+    "rekening": "Kegiatan",
+    "petugas": "Hari"
+  },
+  {
+    "id": 9,
+    "nama_pj": "Dina",
+    "tanggal": "2023-01-09",
+    "nominal": 750000,
+    "rekening": "Keseharian",
+    "petugas": "Irna"
+  },
+  {
+    "id": 10,
+    "nama_pj": "Vito",
+    "tanggal": "2023-01-10",
+    "nominal": 930000,
+    "rekening": "Lain-Lain",
+    "petugas": "Joni"
+  },
+  {
+    "id": 11,
+    "nama_pj": "Rina",
+    "tanggal": "2023-01-11",
+    "nominal": 800000,
+    "rekening": "Listrik",
+    "petugas": "Kiki"
+  },
+  {
+    "id": 12,
+    "nama_pj": "Nando",
+    "tanggal": "2023-01-12",
+    "nominal": 1060000,
+    "rekening": "Air",
+    "petugas": "Lina"
+  },
+  {
+    "id": 13,
+    "nama_pj": "Elsa",
+    "tanggal": "2023-01-13",
+    "nominal": 870000,
+    "rekening": "Perlengkapan",
+    "petugas": "Maya"
+  },
+  {
+    "id": 14,
+    "nama_pj": "Gilang",
+    "tanggal": "2023-01-14",
+    "nominal": 940000,
+    "rekening": "Kesehatan",
+    "petugas": "Nina"
+  },
+  {
+    "id": 15,
+    "nama_pj": "Intan",
+    "tanggal": "2023-01-15",
+    "nominal": 990000,
+    "rekening": "Perbaikan",
+    "petugas": "Opik"
+  },
+  {
+    "id": 16,
+    "nama_pj": "Farhan",
+    "tanggal": "2023-01-16",
+    "nominal": 850000,
+    "rekening": "Internet",
+    "petugas": "Putri"
+  },
+  {
+    "id": 17,
+    "nama_pj": "Lutfi",
+    "tanggal": "2023-01-17",
+    "nominal": 790000,
+    "rekening": "Kebersihan",
+    "petugas": "Qori"
+  },
+  {
+    "id": 18,
+    "nama_pj": "Sari",
+    "tanggal": "2023-01-18",
+    "nominal": 760000,
+    "rekening": "Kegiatan",
+    "petugas": "Raka"
+  },
+  {
+    "id": 19,
+    "nama_pj": "Riko",
+    "tanggal": "2023-01-19",
+    "nominal": 910000,
+    "rekening": "Keseharian",
+    "petugas": "Salsa"
+  },
+  {
+    "id": 20,
+    "nama_pj": "Karina",
+    "tanggal": "2023-01-20",
+    "nominal": 1080000,
+    "rekening": "Lain-Lain",
+    "petugas": "Tono"
+  },
+  {
+    "id": 21,
+    "nama_pj": "Bayu",
+    "tanggal": "2023-01-21",
+    "nominal": 1000000,
+    "rekening": "Listrik",
+    "petugas": "Umi"
+  },
+  {
+    "id": 22,
+    "nama_pj": "Melati",
+    "tanggal": "2023-01-22",
+    "nominal": 910000,
+    "rekening": "Air",
+    "petugas": "Vian"
+  },
+  {
+    "id": 23,
+    "nama_pj": "Iqbal",
+    "tanggal": "2023-01-23",
+    "nominal": 970000,
+    "rekening": "Perlengkapan",
+    "petugas": "Wati"
+  },
+  {
+    "id": 24,
+    "nama_pj": "Jasmine",
+    "tanggal": "2023-01-24",
+    "nominal": 1020000,
+    "rekening": "Kesehatan",
+    "petugas": "Xena"
+  },
+  {
+    "id": 25,
+    "nama_pj": "Andi",
+    "tanggal": "2023-01-25",
+    "nominal": 930000,
+    "rekening": "Perbaikan",
+    "petugas": "Yanu"
+  },
+  {
+    "id": 26,
+    "nama_pj": "Yusuf",
+    "tanggal": "2023-01-26",
+    "nominal": 870000,
+    "rekening": "Internet",
+    "petugas": "Zaki"
+  },
+  {
+    "id": 27,
+    "nama_pj": "Ayu",
+    "tanggal": "2023-01-27",
+    "nominal": 910000,
+    "rekening": "Kebersihan",
+    "petugas": "Audy"
+  },
+  {
+    "id": 28,
+    "nama_pj": "Galih",
+    "tanggal": "2023-01-28",
+    "nominal": 1000000,
+    "rekening": "Kegiatan",
+    "petugas": "Budi"
+  },
+  {
+    "id": 29,
+    "nama_pj": "Nina",
+    "tanggal": "2023-01-29",
+    "nominal": 940000,
+    "rekening": "Keseharian",
+    "petugas": "Citra"
+  },
+  {
+    "id": 30,
+    "nama_pj": "Fajar",
+    "tanggal": "2023-01-30",
+    "nominal": 980000,
+    "rekening": "Lain-Lain",
+    "petugas": "Dina"
+  },
+  {
+    "id": 31,
+    "nama_pj": "Dedi",
+    "tanggal": "2023-02-01",
+    "nominal": 890000,
+    "rekening": "Listrik",
+    "petugas": "Eko"
+  },
+  {
+    "id": 32,
+    "nama_pj": "Putri",
+    "tanggal": "2023-02-02",
+    "nominal": 1050000,
+    "rekening": "Air",
+    "petugas": "Fajar"
+  },
+  {
+    "id": 33,
+    "nama_pj": "Agus",
+    "tanggal": "2023-02-03",
+    "nominal": 970000,
+    "rekening": "Perlengkapan",
+    "petugas": "Gina"
+  },
+  {
+    "id": 34,
+    "nama_pj": "Siti",
+    "tanggal": "2023-02-04",
+    "nominal": 930000,
+    "rekening": "Kesehatan",
+    "petugas": "Hari"
+  },
+  {
+    "id": 35,
+    "nama_pj": "Rizky",
+    "tanggal": "2023-02-05",
+    "nominal": 860000,
+    "rekening": "Perbaikan",
+    "petugas": "Irna"
+  },
+  {
+    "id": 36,
+    "nama_pj": "Lia",
+    "tanggal": "2023-02-06",
+    "nominal": 910000,
+    "rekening": "Internet",
+    "petugas": "Joni"
+  },
+  {
+    "id": 37,
+    "nama_pj": "Wulan",
+    "tanggal": "2023-02-07",
+    "nominal": 870000,
+    "rekening": "Kebersihan",
+    "petugas": "Kiki"
+  },
+  {
+    "id": 38,
+    "nama_pj": "Anton",
+    "tanggal": "2023-02-08",
+    "nominal": 940000,
+    "rekening": "Kegiatan",
+    "petugas": "Lina"
+  },
+  {
+    "id": 39,
+    "nama_pj": "Tiara",
+    "tanggal": "2023-02-09",
+    "nominal": 990000,
+    "rekening": "Keseharian",
+    "petugas": "Maya"
+  },
+  {
+    "id": 40,
+    "nama_pj": "Mega",
+    "tanggal": "2023-02-10",
+    "nominal": 1000000,
+    "rekening": "Lain-Lain",
+    "petugas": "Nina"
+  },
+  {
+    "id": 41,
+    "nama_pj": "Fikri",
+    "tanggal": "2023-02-11",
+    "nominal": 910000,
+    "rekening": "Listrik",
+    "petugas": "Opik"
+  },
+  {
+    "id": 42,
+    "nama_pj": "Dewi",
+    "tanggal": "2023-02-12",
+    "nominal": 970000,
+    "rekening": "Air",
+    "petugas": "Putri"
+  },
+  {
+    "id": 43,
+    "nama_pj": "Reza",
+    "tanggal": "2023-02-13",
+    "nominal": 860000,
+    "rekening": "Perlengkapan",
+    "petugas": "Qori"
+  },
+  {
+    "id": 44,
+    "nama_pj": "Aditya",
+    "tanggal": "2023-02-14",
+    "nominal": 1030000,
+    "rekening": "Kesehatan",
+    "petugas": "Raka"
+  },
+  {
+    "id": 45,
+    "nama_pj": "Hilmi",
+    "tanggal": "2023-02-15",
+    "nominal": 980000,
+    "rekening": "Perbaikan",
+    "petugas": "Salsa"
+  },
+  {
+    "id": 46,
+    "nama_pj": "Tegar",
+    "tanggal": "2023-02-16",
+    "nominal": 970000,
+    "rekening": "Internet",
+    "petugas": "Tono"
+  },
+  {
+    "id": 47,
+    "nama_pj": "Zahra",
+    "tanggal": "2023-02-17",
+    "nominal": 920000,
+    "rekening": "Kebersihan",
+    "petugas": "Umi"
+  },
+  {
+    "id": 48,
+    "nama_pj": "Ammar",
+    "tanggal": "2023-02-18",
+    "nominal": 880000,
+    "rekening": "Kegiatan",
+    "petugas": "Vian"
+  },
+  {
+    "id": 49,
+    "nama_pj": "Cinta",
+    "tanggal": "2023-02-19",
+    "nominal": 940000,
+    "rekening": "Keseharian",
+    "petugas": "Wati"
+  },
+  {
+    "id": 50,
+    "nama_pj": "Elisa",
+    "tanggal": "2023-02-20",
+    "nominal": 990000,
+    "rekening": "Lain-Lain",
+    "petugas": "Xena"
+  }
+]

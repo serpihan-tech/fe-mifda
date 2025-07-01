@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { WalletAdd } from 'iconsax-react';
-import { Montserrat } from "next/font/google"
+import { WalletAdd } from "iconsax-react";
+import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-})
+});
 
 export default function PemasukanCard(props) {
   const { data } = props;
   const rupiah = data
-    ? new Intl.NumberFormat('id-ID', {
-        style: 'currency',
-        currency: 'IDR',
+    ? new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
       }).format(data.amount)
     : null;
 
@@ -23,7 +23,9 @@ export default function PemasukanCard(props) {
         <div className="space-y-1">
           {data ? (
             <>
-              <div className="text-sm font-semibold text-gray-800">{data.title}</div>
+              <div className="text-sm font-semibold text-gray-800">
+                {data.title}
+              </div>
               <div className="text-xs text-gray-500">{data.detail}</div>
             </>
           ) : (
