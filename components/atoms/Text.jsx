@@ -19,7 +19,7 @@ export default function Text(props) {
   const { 
     children,
     font = "montserrat",
-    type = "text",
+    type,
     className
   } = props
 

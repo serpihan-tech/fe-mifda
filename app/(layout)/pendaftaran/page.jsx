@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 import PemasukanCard from "@/components/organisms/Card"
 import Text from "@/components/atoms/Text"
 import Modal from "@/components/atoms/Modal"
-import dynamic from 'next/dynamic'
 
 
 
@@ -41,7 +40,7 @@ export default function Page() {
         })
       })
   }, [])
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const a = async(hasil) => {
     setOpen(true)
@@ -72,7 +71,7 @@ export default function Page() {
             )
         }
       </div>
-      <Text className="font-semibold">Data Pemasukan Pondok Pesantren</Text>
+      <Text className="font-semibold mt-4 mb-2">Data Pendaftaran Putra/Putri Pondok Pesantren</Text>
       {
         dataPemasukanTable.status ?
         (<>

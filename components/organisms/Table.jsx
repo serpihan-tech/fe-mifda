@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { ArrowDown3, ArrowUp3, Sort } from 'iconsax-react';
+import Button from '../atoms/Button';
+import Text from '../atoms/Text';
 
 const entries = [10, 25, 50, 100];
 
@@ -11,16 +13,16 @@ function TableHeader({ children }) {
       sortOrder === '' ? 'asc' : sortOrder === 'asc' ? 'desc' : ''
     );
   }
-return (
-  <th className='text-center'>
-    <div className='w-full flex items-center justify-between px-2 py-1'>
-      {children}
-      <button className='ml-2' onClick={() => { sortCommand() }}>
-        {sortOrder === '' ? <Sort /> : sortOrder === 'asc' ? <ArrowUp3 /> : <ArrowDown3 />}
-      </button>
-    </div>
-  </th>
-)
+  return (
+    <th className='text-center px-4 py-2'>
+      <div className='w-full flex items-center justify-between px-2 py-1'>
+        <Text>{children}</Text>
+        <button className='ml-2' onClick={() => { sortCommand() }}>
+          {sortOrder === '' ? <Sort /> : sortOrder === 'asc' ? <ArrowUp3 /> : <ArrowDown3 />}
+        </button>
+      </div>
+    </th>
+  )
 }
 
 
@@ -43,29 +45,42 @@ export default function PemasukanTable(props) {
     <div className="w-full flex flex-col gap-4">
       {/* Control panel */}
       <div className="bg-white p-4 rounded-md shadow flex flex-wrap justify-between items-center gap-4">
-        <div className="flex items-center gap-2 text-sm">
-          <span>Show</span>
-          <select
-            className="border rounded px-2 py-1"
-            value={showEntries}
-            onChange={(e) => setShowEntries(parseInt(e.target.value))}
-          >
-            {entries?.map((entry) => (
-              <option key={entry} value={entry}>
-                {entry}
-              </option>
-            ))}
-          </select>
-          <span>entries</span>
+        <div className='flex gap-6'>
+          <div className="flex items-center gap-2 text-sm">
+            <span><Text>show</Text></span>
+            <select
+              className="border rounded px-2 py-1"
+              value={showEntries}
+              onChange={(e) => setShowEntries(parseInt(e.target.value))}
+            >
+              {entries?.map((entry) => (
+                <option key={entry} value={entry}>
+                  <Text>
+                    {entry}
+                  </Text>
+                </option>
+              ))}
+            </select>
+            <span>
+              <Text>
+                entries
+              </Text>
+            </span>
+          </div>
+
+          <input
+            type="text"
+            placeholder="Search nama_pj..."
+            className="border rounded px-3 py-1 text-sm w-60"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
 
-        <input
-          type="text"
-          placeholder="Search nama_pj..."
-          className="border rounded px-3 py-1 text-sm w-60"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        <div className='flex gap-4'>
+          <Button>Tambah Data</Button>
+          <Button variants="inline-orange">Export Data</Button>
+        </div>
       </div>
 
       {/* Table */}
@@ -76,31 +91,41 @@ export default function PemasukanTable(props) {
               {
                 columns?.map((column) => (
                   <TableHeader key={column.key} >
-                    {column.label}
+                    <Text>
+
+                      {column.label}
+                    </Text>
                   </TableHeader>
                 ))
               }
               {hasAction && (
-                <th className="px-4 py-2 border">Action</th>
+                <th className="px-4 py-2 ">
+                  <Text>
+                    Action
+                  </Text>
+                </th>
               )}
             </tr>
           </thead>
           <tbody>
             {visibleData?.map((item, index) => {
               const dataRow = item
-              return <tr key={item.id} className="hover:bg-gray-50 transition-all border-b">
+              return <tr key={item.id} className="hover:bg-gray-50 transition-all odd:bg-[#f9fbff] even:bg-[#F7F6FE]">
                 {
                   columns?.map((column) => (
                     <>
-                      <td key={column.key} className="px-4 py-2 border">
-                        {item[String(column.key)]}
+                      <td key={column.key} className="px-4 py-2">
+                        <Text>
+
+                          {item[String(column.key)]}
+                        </Text>
                       </td>
                     </>
                   ))
                 }
                 {
                   hasAction && (
-                    <td className="px-4 py-2 border flex flex-row gap-2 justify-center">
+                    <td className="px-4 py-2 flex flex-row gap-2 justify-center">
                       {componentAction.map((item) => {
                         const { func, icon, style } = item
                         return (
@@ -118,7 +143,9 @@ export default function PemasukanTable(props) {
             {visibleData?.length === 0 && (
               <tr>
                 <td colSpan={6} className="text-center py-4 text-gray-500 italic">
-                  Tidak ada data ditemukan.
+                  <Text>
+                    Tidak ada data ditemukan.
+                  </Text>
                 </td>
               </tr>
             )}
@@ -129,7 +156,9 @@ export default function PemasukanTable(props) {
       {/* Footer */}
       <div className="flex justify-between items-center text-sm text-gray-600 px-1">
         <div>
-          Showing {visibleData?.length} of {filteredData?.length} entries
+          <Text>
+            Showing {visibleData?.length} of {filteredData?.length} entries
+          </Text>
         </div>
       </div>
     </div>

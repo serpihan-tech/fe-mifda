@@ -13,6 +13,7 @@ export default function MyPDFViewer() {
   const [pageNumber, setPageNumber] = useState(1);
   const containerRef = useRef(null);
   const pageRefs = useRef([]);
+  // const [totalPage, setTotalPage] = useState([]);
 
   // 🔄 Update lebar container
   useEffect(() => {
@@ -69,7 +70,8 @@ export default function MyPDFViewer() {
                   width={containerWidth}
                   onRenderSuccess={(page) => {
                     const { width, height } = page;
-                    console.log(`Ukuran halaman ${index + 1}:`, width, height);
+                    // console.log(`Ukuran halaman ${index + 1}:`, width, height);
+                    setTotalPage(prevPages => [...prevPages, { width, height }]);
                   }}
                 />
               </div>
