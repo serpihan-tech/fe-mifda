@@ -1,30 +1,44 @@
-'use client';
+"use client";
 
-import Button from "@/components/atoms/Button";
-import dynamic from 'next/dynamic';
-import { NavigationMain } from "@/components/organisms/Navigation";
-// import MyPDFViewer from "@/components/molecules/MyPDFViewer";
-
-const MyPDFViewer = dynamic(() => import('@/components/molecules/MyPDFViewer'), { ssr: false });
+import { ArrowRight } from "iconsax-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="w-full h-full">
-      {/* Header Start */}
-      <NavigationMain/>
-      {/* Header End */}
-      {/* Content Start */}
-      <div className="sm:px-8 px-4 w-full mx-auto max-w-[1440px] ">
-        <div className="bg-gray-500 w-fit rounded-lg">
-            <MyPDFViewer />
-          <div>
+  const router = useRouter();
 
-          </div>
-        </div>
+  return (
+    <div className="w-full h-full items-center justify-center flex flex-col space-y-16">
+      <div className="w-full flex items-center justify-center space-x-9">
+        <Image
+          src="/svg/e-mifda.svg"
+          alt="e-mifda"
+          width={175}
+          height={175}
+          priority
+        />
+        <h1 className="text-[#146168] text-7xl font-semibold transition-all duration-300 ease-in-out">
+          e-mifda
+        </h1>
       </div>
-      {/* Content End */}
-      {/* Footer Start */}
-      {/* Footer End */}
+      <button
+        onClick={() => router.push("/login")}
+        className="w-1/3 text-neutral-100 bg-[#146168] text-xl rounded-xl py-2.5 font-semibold hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+      >
+        Log in
+      </button>
+      <div className="flex">
+        <Link href="/dashboard" className="text-blue-600 underline">
+          <div className="flex underline items-center">
+            <span> dahsboard </span>
+            <span>
+              {" "}
+              <ArrowRight size={15} color="currentColor" className="underline"/>{" "}
+            </span>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }
