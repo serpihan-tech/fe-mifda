@@ -62,9 +62,9 @@ export default function SideBar() {
             title="Keuangan"
             icon={WalletMinus}
             subItems={[
-              { title: "Pembayaran", url: "/dashboard/pembayaran" },
-              { title: "Tunggakan", url: "/dashboard/tunggakan" },
-              { title: "Master SPP", url: "/dashboard/master-spp" },
+              { title: "Pembayaran", url: "/keuangan/pembayaran" },
+              { title: "Tunggakan", url: "/keuangan/tunggakan" },
+              { title: "Master SPP", url: "/keuangan/master-spp" },
             ]}
           />
           {/* Logout */}
