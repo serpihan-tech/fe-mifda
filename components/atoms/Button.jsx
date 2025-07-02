@@ -6,15 +6,25 @@
  * }} props
  */
 
+import Text from "./Text"
+
 export default function Button(props) {
   const { 
-    variants, 
-    label
+    variants = 'primary', 
+    label,
+    children
   } = props
-
+  const variantRef = (
+    variants === 'primary' ? 
+    'bg-[#146168] text-white rounded-full py-2 px-8 text-sm font-semibold' : 
+    variants === 'inline-orange' ? 
+    'bg-[#FDECCE] text-[#F49F0A] rounded-full py-2 px-8 text-sm font-semibold border border-[#FBDFAD]' :
+    '')
   return(
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      {label? label : "Button"}
+    <button className={`${variantRef}`}>
+      <Text>
+        {children ? children : "Button"}
+      </Text>
     </button>
   )
 }
