@@ -42,27 +42,31 @@ export default function SideBar() {
         <div className="flex flex-col pb-3">
           {/* Dashboard */}
           <SidebarItem title="Dashboard" icon={Home3} url="/dashboard" />
-
           {/* Pendaftaran */}
           <SidebarItem
             title="Pendaftaran"
             icon={ProfileAdd}
             url="/pendaftaran"
           />
-
           {/* Pemasukan */}
           <SidebarItem title="Pemasukan" icon={WalletAdd1} url="/pemasukan" />
-
           {/* Pengeluaran */}
           <SidebarItem
             title="Pengeluaran"
             icon={WalletMinus}
             url="/pengeluaran"
           />
-
           {/* Rekening */}
           <SidebarItem title="Rekening" icon={Cards} url="/rekening" />
-
+          <SidebarItem
+            title="Keuangan"
+            icon={WalletMinus}
+            subItems={[
+              { title: "Pembayaran", url: "/dashboard/pembayaran" },
+              { title: "Tunggakan", url: "/dashboard/tunggakan" },
+              { title: "Master SPP", url: "/dashboard/master-spp" },
+            ]}
+          />
           {/* Logout */}
           <LogOutButton title="Logout" icon={LogoutCurve} colorIcon="#dc1010" />
         </div>
