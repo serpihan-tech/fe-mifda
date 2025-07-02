@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+"use client"
+import React, { useState } from 'react';
 import { ArrowDown3, ArrowUp3, Sort } from 'iconsax-react';
 import Button from '../atoms/Button';
 import Text from '../atoms/Text';
