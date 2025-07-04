@@ -37,7 +37,7 @@ export default function PemasukanTable(props) {
   const [showEntries, setShowEntries] = useState(10);
 
   const filteredData = data?.filter((item) =>
-    item.nama_pj.toLowerCase().includes(search.toLowerCase())
+    item.nama_pj
   );
   const visibleData = filteredData?.slice(0, showEntries);
 
