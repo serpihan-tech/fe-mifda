@@ -4,9 +4,9 @@ import StatisticChart from "@/components/organisms/StatisticChart";
 import InfoTotalCard from "@/components/organisms/InfoTotalCard";
 import StatusCard from "@/components/organisms/StatusCard";
 import TunggakanCard from "@/components/organisms/TunggakanCard";
-import PemasukanCard from "@/components/organisms/PemasukanCard";
 import PengeluaranCard from "@/components/organisms/PengeluaranCard";
 import PerizinanCard from "@/components/organisms/PerizinanCard";
+import PemasukanDashboardCard from "@/components/organisms/PemasukanDashboardCard";
 
 export default function dashboard() {
   return (
@@ -31,7 +31,7 @@ export default function dashboard() {
         <div className="w-full flex space-x-8">
           <div className="w-3/5 space-x-8 flex">
             <div className="w-1/2">
-              <PemasukanCard />
+              <PemasukanDashboardCard />
             </div>
             <div className="w-1/2">
               <PengeluaranCard />

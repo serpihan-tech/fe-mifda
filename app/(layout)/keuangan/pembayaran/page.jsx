@@ -1,44 +1,23 @@
 "use client"
-import { Image, DocumentText, WalletMoney, Edit2, Trash } from "iconsax-react"
+import { Edit2, Trash } from "iconsax-react"
 import Table from "@/components/organisms/Table"
 import { useEffect, useState } from "react"
 import Text from "@/components/atoms/Text"
 import Modal from "@/components/atoms/Modal"
+import { getKeuanganTable } from "@/lib/keuangan.js"
 
-export default function SantriPage() {
-  const [dataSantriTable, setDataSantriTable] = useState({
+export default function clientComponent() {
+  const [dataKeuanganTable, setDataKeuanganTable] = useState({
     result: [],
     status: false
   })
 
   useEffect(() => {
-    // Simulasi data - pastikan semua field ada
-    const sampleData = [
-      {
-        id: 1,
-        tanggal: "2024-01-15",
-        nama_santri: "Ahmad Fauzan",
-        jenis_kelamin: "L",
-        jenjang: "SMP",
-        nominal: "Rp 500.000",
-        keperluan: "SPP Bulanan",
-      },
-      {
-        id: 2,
-        tanggal: "2024-01-16",
-        nama_santri: "Fatimah Zahra",
-        jenis_kelamin: "P",
-        jenjang: "SMA",
-        nominal: "Rp 750.000",
-        keperluan: "Biaya Makan",
-      },
-      // ... data lainnya
-    ];
-
-    setDataSantriTable({
-      result: sampleData,
+    getKeuanganTable()
+    .then((res) => setDataKeuanganTable({
+      result: res,
       status: true
-    });
+    }))
   }, [])
 
   const [open, setOpen] = useState(false);
@@ -50,23 +29,25 @@ export default function SantriPage() {
 
   const handleEdit = async(data) => {
     console.log("Edit data:", data)
+    // Implementasi edit data
   }
 
   const handleDelete = async(data) => {
     if (confirm(`Apakah Anda yakin ingin menghapus data ${data.nama_santri}?`)) {
       console.log("Delete data:", data)
+      // Implementasi delete data
     }
   }
 
   return (
     <div className="text-black flex-grow">
-      <Text className="font-semibold mt-4 mb-2">Data Pembayaran Santri Pondok Pesantren</Text>
+      <Text className="font-semibold mt-4 mb-2">Data Pembayaran Santri/wati</Text>
       
-      {dataSantriTable.status ? (
+      {dataKeuanganTable.status ? (
         <>
           <Table
-            data={dataSantriTable.result}
-            searchField="nama_santri" // Specify field untuk pencarian
+            data={dataKeuanganTable.result}
+            searchField="nama_santri"
             columns={[
               {
                 key: "id",
@@ -100,26 +81,24 @@ export default function SantriPage() {
             hasAction={true}
             componentAction={[
               {
-                func: handleView,
-                icon: <Image />,
-                style: "bg-[#146168] rounded-full py-2 px-2 text-white hover:bg-[#0f4c52] transition-colors"
+                func: handleDelete,
+                icon: <Trash size={20} />,
+                style: "bg-[#DC2626] rounded-full py-2 px-2 text-white hover:bg-[#b91c1c] transition-colors"
               },
               {
                 func: handleEdit,
-                icon: <Edit2 />,
+                icon: <Edit2 size={20} />,
                 style: "bg-[#0B31DB] rounded-full py-2 px-2 text-white hover:bg-[#0a2bb5] transition-colors"
               },
-              {
-                func: handleDelete,
-                icon: <Trash />,
-                style: "bg-[#DC2626] rounded-full py-2 px-2 text-white hover:bg-[#b91c1c] transition-colors"
-              }
+              
             ]}
           /> 
           {open && <Modal onClose={() => setOpen(false)} />}
         </>
       ) : (
-        <Table />
+        <div className="p-4 bg-gray-100 rounded">
+          <Text>Loading...</Text>
+        </div>
       )}
     </div>
   )

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "tanggal": "2024-01-15",
+    "nama_santri": "Ahmad Fauzan",
+    "jenis_kelamin": "L",
+    "jenjang": "SMP",
+    "nominal": "Rp 500.000",
+    "keperluan": "SPP Bulanan"
+  },
+  {
+    "id": 2,
+    "tanggal": "2024-01-15",
+    "nama_santri": "Ahmad Fauzan",
+    "jenis_kelamin": "L",
+    "jenjang": "SMP",
+    "nominal": "Rp 500.000",
+    "keperluan": "SPP Bulanan"
+  }
+]

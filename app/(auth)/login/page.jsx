@@ -14,10 +14,13 @@ import { useForm } from "react-hook-form"
 import { useRouter } from "next/navigation";
 import Text from "@/components/atoms/Text";
 import InputText from "@/components/molecules/InputText";
+import Button from "@/components/atoms/Button";
+import { toast } from "react-toastify";
 
 
 export default function Page() {
   const router = useRouter();
+  const [notifyAppear, setNotifyAppear] = useState(false)
   const stateOrientation = useMediaQuery({ query: "(orientation: portrait)" })
   const [isPortrait, setIsPortrait] = useState(true);
 
@@ -44,6 +47,7 @@ export default function Page() {
       for (let i = 0; i < data.length; i++) {
         if (data[i].email === email && data[i].password === password) {
           router.push("/dashboard");
+          setNotifyAppear(true)
           return data[i];
         }
       }
@@ -97,9 +101,12 @@ export default function Page() {
                 <label htmlFor="remember-me" className="text-neutral-600 text-xs">Remember Me?</label>
               </div>
             </div>
-            <button type="submit" className="w-full text-neutral-100 bg-[#146168] rounded-full py-2 font-bold">
-              Log in
-            </button>
+            <Button 
+              type="submit" 
+              className="w-full text-neutral-100 bg-[#146168] rounded-full py-2 font-bold"
+            >
+              Log In
+            </Button>
           </form>
         </div>
       </div>

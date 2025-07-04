@@ -1,18 +1,25 @@
 "use client";
 
-import { Montserrat } from "next/font/google";
-import Image from "next/image";
-import CardShadow from "../atoms/CardShadow";
-import { ArrowRight } from "iconsax-react";
+import { WalletAdd } from 'iconsax-react';
+import { Montserrat } from "next/font/google"
+import Text from '../atoms/Text';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export default function PemasukanCard() {
+export function PemasukanCard(props) {
+  const { data } = props;
+  const rupiah = data
+    ? new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+      }).format(data.amount)
+    : null;
+
   return (
-    <CardShadow bgColor="bg-[#146168]">
+    <div bgColor="bg-[#146168]">
       <div className="w-full px-5 pt-5 flex space-x-4 items-center">
         <div className="rounded-full bg-[#f2fffa] w-20 h-20 flex items-center justify-center overflow-hidden">
           <Image
@@ -30,21 +37,62 @@ export default function PemasukanCard() {
             Oktober 2023
           </div>
         </div>
+
+        {data ? (
+          <WalletAdd size="20" />
+        ) : (
+          <div className="h-6 w-6 bg-gray-200 rounded-full animate-pulse" />
+        )}
       </div>
-      <div className="w-full pt-7 pb-5 text-[#f2fffa] text-[28px] font-semibold justify-center flex">
-        Rp. 7.400.000
+
+      <div className={`${montserrat.className} font-semibold text h-7`}>
+        {data ? (
+          rupiah
+        ) : (
+          <div className="h-6 w-32 bg-gray-200 rounded animate-pulse" />
+        )}
       </div>
-      <hr color="#b1cacd" className="h-1/5" />
-      <div className="self-stretch px-8 pt-7 pb-5 flex justify-between items-center">
-        <button className="w-full flex px-5 py-2 self-stretch bg-[#f2fffa] rounded-[25px] shadow-[0px_0.5px_6px_0px_rgba(255,255,255,0.40)] justify-between items-center group">
-          <div className="text-[#146168] text-base font-semibold">
-            Lihat Detail
-          </div>
-          <div className="bg-[#115157] rounded-full p-1">
-            <ArrowRight size={24} color="#f9fbff" />
-          </div>
-        </button>
+    </div>
+  );
+}
+
+export function LayoutCard(props) {
+  return (
+    <div className="w-full space-x-8 flex flex-row p-4 bg-[#f2fffa] rounded-md shadow-sm">
+      {props.children}
+    </div>
+  );
+}
+
+export function CardTitle(props) {
+  return (
+    <div className={`space-y-1 ${props.typeFlex? `flex ${propstypeFlex}`: "flex"}`}>
+      <div className="text-sm font-semibold text-gray-800">
+        <Text>
+          {props.title}
+        </Text>
       </div>
-    </CardShadow>
+      <div className="text-xs text-gray-500">
+        <Text>
+          {props.subtitle}
+        </Text>
+      </div>
+    </div>
+  );
+}
+
+export function Card(props) {
+  return (
+    <div className="space-y-1 w-full gap-4">
+      {props.children}
+    </div>
+  );
+}
+
+export function CardContent (props) {
+  return (
+    <div className={`${montserrat.className} font-semibold text h-7`}>
+      {props.children}
+    </div>
   );
 }
