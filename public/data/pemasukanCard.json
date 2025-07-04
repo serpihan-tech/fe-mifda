@@ -1,17 +1,17 @@
 [
   {
-    "title": "Recap Pemasukan",
-    "detail": "Hari Ini",
+    "title": "Hari Ini",
+    "subtitle": "Recap Pemasukan",
     "amount": 5650000
   },
   {
-    "title": "Recap Pemasukan",
-    "detail": "Minggu Ini",
+    "title": "Minggu Ini",
+    "subtitle": "Recap Pemasukan",
     "amount": 125650000
   },
   {
-    "title": "Recap Pemasukan",
-    "detail": "Bulan Ini",
+    "title": "Bulan Ini",
+    "subtitle": "Recap Pemasukan",
     "amount": 1225650000
   }
 ]

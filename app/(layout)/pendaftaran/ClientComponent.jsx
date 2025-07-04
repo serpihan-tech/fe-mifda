@@ -62,7 +62,10 @@ export default function clientComponent() {
               </>
             )
         } */}
-        <CardPendaftaran data= {dataPendaftaranCard.result} />
+        <CardPendaftaran 
+          data= {dataPendaftaranCard.result}
+          status = {dataPendaftaranCard.status}
+        />
       </div>
       <Text className="font-semibold mt-4 mb-2">Data Pendaftaran Putra/Putri Pondok Pesantren</Text>
       {
@@ -77,25 +80,21 @@ export default function clientComponent() {
                   label: "No",
                 },
                 {
-                  key: "nama_pj",
-                  label: "Nama PJ",
+                  key: "nama",
+                  label: "Nama",
                 },
                 {
-                  key: "tanggal",
-                  label: "Tanggal",
+                  key: "l_p",
+                  label: "L/P",
                 },
                 {
-                  key: "nominal",
-                  label: "Nominal",
+                  key: "nomor_telp",
+                  label: "Nomor Telp",
                 },
                 {
-                  key: "rekening",
-                  label: "Rekening",
+                  key: "status",
+                  label: "Status",
                 },
-                {
-                  key: "petugas",
-                  label: "Petugas",
-                }
               ]
             }
             hasAction = {true}
