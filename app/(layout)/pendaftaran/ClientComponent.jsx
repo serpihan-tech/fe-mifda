@@ -3,31 +3,31 @@ import { Image, DocumentText, WalletMoney } from "iconsax-react"
 import { Montserrat } from "next/font/google"
 import Table from "@/components/organisms/Table"
 import { useEffect, useState } from "react"
-import PemasukanCard from "@/components/organisms/Card"
 import Text from "@/components/atoms/Text"
 import Modal from "@/components/atoms/Modal"
-import { getPemasukanCard, getPemasukanTable } from "@/lib/pemasukan"
+import { getPendaftaranCard, getPendaftaranTable } from "@/lib/pendaftaran.js"
+import { CardPendaftaran } from "./components/CardPendaftaran"
 
 
 
 export default function clientComponent() {
-  const [dataPemasukanCard, setDataPemasukanCard] = useState({
+  const [dataPendaftaranCard, setDataPendaftaranCard] = useState({
     result: [],
     status: false
   })
-  const [dataPemasukanTable, setDataPemasukanTable] = useState({
+  const [dataPendaftaranTable, setDataPendaftaranTable] = useState({
     result: [],
     status: false
   })
 
   useEffect(() => {
-    getPemasukanCard()
-    .then((res) => setDataPemasukanCard({
+    getPendaftaranCard()
+    .then((res) => setDataPendaftaranCard({
       result: res,
       status: true
     }))
-    getPemasukanTable()
-    .then((res) => setDataPemasukanTable({
+    getPendaftaranTable()
+    .then((res) => setDataPendaftaranTable({
       result: res,
       status: true
     }))
@@ -47,28 +47,29 @@ export default function clientComponent() {
       {/* Cards Layout */}
       <div className="w-{inherit} flex gap-2">
         {/* Cards*/}
-        {
-          dataPemasukanCard.status ?
-            dataPemasukanCard.result.map((item, index) => {
+        {/* {
+          dataPendaftaranCard.status ?
+            dataPendaftaranCard.result.map((item, index) => {
               return (
-                <PemasukanCard key={index} data={item} />
+                <PendaftaranCard key={index} data={item} />
               )
             }) :
             (
               <>
-                <PemasukanCard />
-                <PemasukanCard />
-                <PemasukanCard />
+                <PendaftaranCard />
+                <PendaftaranCard />
+                <PendaftaranCard />
               </>
             )
-        }
+        } */}
+        <CardPendaftaran data= {dataPendaftaranCard.result} />
       </div>
       <Text className="font-semibold mt-4 mb-2">Data Pendaftaran Putra/Putri Pondok Pesantren</Text>
       {
-        dataPemasukanTable.status ?
+        dataPendaftaranTable.status ?
         (<>
           <Table
-            data={dataPemasukanTable.result}
+            data={dataPendaftaranTable.result}
             columns={
               [
                 {

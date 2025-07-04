@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ArrowDown3, ArrowUp3, Sort } from 'iconsax-react';
 import Button from '../atoms/Button';
 import Text from '../atoms/Text';
+import { toast } from 'react-toastify';
 
 const entries = [10, 25, 50, 100];
 
@@ -37,10 +38,10 @@ export default function PemasukanTable(props) {
   const [search, setSearch] = useState('');
   const [showEntries, setShowEntries] = useState(10);
 
-  const filteredData = data?.filter((item) =>
-    item.nama_pj.toLowerCase().includes(search.toLowerCase())
-  );
-  const visibleData = filteredData?.slice(0, showEntries);
+  // const filteredData = data?.filter((item) =>
+  //   item.nama_pj.toLowerCase().includes(search.toLowerCase())
+  // );
+  const visibleData = data
 
   return (
     <div className="w-full flex flex-col gap-4">
@@ -79,7 +80,7 @@ export default function PemasukanTable(props) {
         </div>
 
         <div className='flex gap-4'>
-          <Button>Tambah Data</Button>
+          <Button hasNotify={true} notifyHandler={() => { toast.success("Berhasil Menambahkan Data") }}>Tambah Data</Button>
           <Button variants="inline-orange">Export Data</Button>
         </div>
       </div>
@@ -158,7 +159,7 @@ export default function PemasukanTable(props) {
       <div className="flex justify-between items-center text-sm text-gray-600 px-1">
         <div>
           <Text>
-            Showing {visibleData?.length} of {filteredData?.length} entries
+            {/* Showing {visibleData?.length} of {filteredData?.length} entries */}
           </Text>
         </div>
       </div>
