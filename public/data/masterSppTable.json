@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "nama": "Ahmad Fauzi",
+    "jenjang": "TS",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembayaran SPP"
+  },
+  {
+    "id": 2,
+    "nama": "Siti Nurhaliza",
+    "jenjang": "TS",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembelian Seragam"
+  },
+  {
+    "id": 3,
+    "nama": "Budi Santoso",
+    "jenjang": "SMP",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembayaran Ujian"
+  },
+  {
+    "id": 4,
+    "nama": "Dewi Kartika",
+    "jenjang": "TS",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembelian Buku"
+  },
+  {
+    "id": 5,
+    "nama": "Rizky Pratama",
+    "jenjang": "SMK",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembayaran Praktikum"
+  },
+  {
+    "id": 6,
+    "nama": "Maya Sari",
+    "jenjang": "SMP",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembayaran Ekstrakurikuler"
+  },
+  {
+    "id": 7,
+    "nama": "Andi Wijaya",
+    "jenjang": "TS",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembayaran Makan Siang"
+  },
+  {
+    "id": 8,
+    "nama": "Lestari Indah",
+    "jenjang": "TS",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembelian Alat Tulis"
+  },
+  {
+    "id": 9,
+    "nama": "Hendra Kusuma",
+    "jenjang": "SMP",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembayaran Study Tour"
+  },
+  {
+    "id": 10,
+    "nama": "Ratna Dewi",
+    "jenjang": "SMK",
+    "tahun": "2024",
+    "penggunaan_dana": "Pembayaran Laboratorium"
+  },
+  {
+    "id": 11,
+    "nama": "Agus Setiawan",
+    "jenjang": "TS",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembayaran SPP"
+  },
+  {
+    "id": 12,
+    "nama": "Ani Susanti",
+    "jenjang": "TS",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembelian Mainan Edukatif"
+  },
+  {
+    "id": 13,
+    "nama": "Bayu Anggoro",
+    "jenjang": "SMP",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembayaran Seragam Olahraga"
+  },
+  {
+    "id": 14,
+    "nama": "Citra Dewi",
+    "jenjang": "TS",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembelian Tas Sekolah"
+  },
+  {
+    "id": 15,
+    "nama": "Dimas Anggoro",
+    "jenjang": "SMK",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembayaran Wisuda"
+  },
+  {
+    "id": 16,
+    "nama": "Elsa Pratiwi",
+    "jenjang": "TS",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembayaran Kegiatan Outbound"
+  },
+  {
+    "id": 17,
+    "nama": "Fajar Nugroho",
+    "jenjang": "TS",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembelian Sepatu"
+  },
+  {
+    "id": 18,
+    "nama": "Gita Sari",
+    "jenjang": "SMP",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembayaran Kursus"
+  },
+  {
+    "id": 19,
+    "nama": "Hafiz Maulana",
+    "jenjang": "SMK",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembayaran Bimbingan Belajar"
+  },
+  {
+    "id": 20,
+    "nama": "Ika Sari",
+    "jenjang": "TS",
+    "tahun": "2023",
+    "penggunaan_dana": "Pembelian Kamus"
+  },
+  {
+    "id": 21,
+    "nama": "Joko Susilo",
+    "jenjang": "SMP",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembayaran SPP"
+  },
+  {
+    "id": 22,
+    "nama": "Kartika Putri",
+    "jenjang": "TS",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembelian Baju Renang"
+  },
+  {
+    "id": 23,
+    "nama": "Lukman Hakim",
+    "jenjang": "SMK",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembayaran Penelitian"
+  },
+  {
+    "id": 24,
+    "nama": "Mega Yunita",
+    "jenjang": "TS",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembelian Komputer"
+  },
+  {
+    "id": 25,
+    "nama": "Naufal Akbar",
+    "jenjang": "SMP",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembayaran Kompetisi"
+  },
+  {
+    "id": 26,
+    "nama": "Olivia Putri",
+    "jenjang": "SMK",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembayaran Seminar"
+  },
+  {
+    "id": 27,
+    "nama": "Pandu Setiawan",
+    "jenjang": "TS",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembelian Crayon"
+  },
+  {
+    "id": 28,
+    "nama": "Quina Sari",
+    "jenjang": "TS",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembayaran Lomba"
+  },
+  {
+    "id": 29,
+    "nama": "Reza Maulana",
+    "jenjang": "SMP",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembelian Laptop"
+  },
+  {
+    "id": 30,
+    "nama": "Sri Wahyuni",
+    "jenjang": "SMK",
+    "tahun": "2025",
+    "penggunaan_dana": "Pembayaran Magang"
+  }
+]
