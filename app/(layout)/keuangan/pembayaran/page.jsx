@@ -78,6 +78,13 @@ export default function clientComponent() {
                 label: "Keperluan",
               }
             ]}
+            componentButton={[
+              {
+                // func: handleAddData,
+                text: "Tambah Data",
+                variants: "secondary"
+              }
+            ]}
             hasAction={true}
             componentAction={[
               {

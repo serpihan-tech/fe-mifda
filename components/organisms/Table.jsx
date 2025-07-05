@@ -34,6 +34,7 @@ export default function PemasukanTable(props) {
     columns, // Kolom-kolom yang akan ditampilkan {key, label}
     hasAction, // Apakah ada Column action
     componentAction, // Fungsi yang akan dijalankan ketika tombol action di klik {function, icon, color}
+    componentButton, // Buttons di bagian kanan atas tabel
   } = props;
   const [search, setSearch] = useState('');
   const [showEntries, setShowEntries] = useState(10);
@@ -80,8 +81,22 @@ export default function PemasukanTable(props) {
         </div>
 
         <div className='flex gap-4'>
-          <Button hasNotify={true} notifyHandler={() => { toast.success("Berhasil Menambahkan Data") }}>Tambah Data</Button>
-          <Button variants="inline-orange">Export Data</Button>
+          {/* <Button hasNotify={true} notifyHandler={() => { toast.success("Berhasil Menambahkan Data") }}>Tambah Data</Button>
+          <Button variants="inline-orange">Export Data</Button> */}
+          {componentButton?.map((button, index) => {
+            const { func, text, variants, hasNotify, notifyHandler } = button
+            return (
+              <Button 
+                key={index}
+                onClick={func}
+                variants={variants}
+                hasNotify={hasNotify}
+                notifyHandler={notifyHandler}
+              >
+                {text}
+              </Button>
+            )
+          })}
         </div>
       </div>
 
