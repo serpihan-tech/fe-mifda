@@ -1,32 +1,40 @@
-"use client"
-import React, { useState } from 'react';
-import { ArrowDown3, ArrowUp3, Sort } from 'iconsax-react';
-import Button from '../atoms/Button';
-import Text from '../atoms/Text';
-import { toast } from 'react-toastify';
+"use client";
+import React, { useState } from "react";
+import { ArrowDown3, ArrowUp3, Sort } from "iconsax-react";
+import Button from "../atoms/Button";
+import Text from "../atoms/Text";
+import { toast } from "react-toastify";
 
 const entries = [10, 25, 50, 100];
 
 function TableHeader({ children }) {
-  const [sortOrder, setSortOrder] = useState('');
+  const [sortOrder, setSortOrder] = useState("");
 
   const sortCommand = () => {
-    setSortOrder(
-      sortOrder === '' ? 'asc' : sortOrder === 'asc' ? 'desc' : ''
-    );
-  }
+    setSortOrder(sortOrder === "" ? "asc" : sortOrder === "asc" ? "desc" : "");
+  };
   return (
-    <th className='text-center px-4 py-2'>
-      <div className='w-full flex items-center justify-between px-2 py-1'>
+    <th className="text-center px-4 py-2">
+      <div className="w-full flex items-center justify-between px-2 py-1">
         <Text>{children}</Text>
-        <button className='ml-2' onClick={() => { sortCommand() }}>
-          {sortOrder === '' ? <Sort /> : sortOrder === 'asc' ? <ArrowUp3 /> : <ArrowDown3 />}
+        <button
+          className="ml-2"
+          onClick={() => {
+            sortCommand();
+          }}
+        >
+          {sortOrder === "" ? (
+            <Sort />
+          ) : sortOrder === "asc" ? (
+            <ArrowUp3 />
+          ) : (
+            <ArrowDown3 />
+          )}
         </button>
       </div>
     </th>
-  )
+  );
 }
-
 
 export default function PemasukanTable(props) {
   const {
@@ -35,31 +43,45 @@ export default function PemasukanTable(props) {
     hasAction, // Apakah ada Column action
     componentAction, // Fungsi yang akan dijalankan ketika tombol action di klik {function, icon, color}
     componentButton, // Buttons di bagian kanan atas tabel
-    variants = ''
+    variants = "",
   } = props;
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [showEntries, setShowEntries] = useState(10);
 
   // const filteredData = data?.filter((item) =>
   //   item.nama_pj.toLowerCase().includes(search.toLowerCase())
   // );
-  const visibleData = data
+  const visibleData = data;
 
   // Fungsi untuk mendapatkan styling berdasarkan variant
-  const getVariantStyle = (columnVariant) => {
-    if (columnVariant === 'primary') {
-      return 'w-10 flex justify-center items-center bg-[#0b31db] text-[#f2fffa] text-sm font-semibold rounded-[10px] px-3 py-2 shadow-[0px_0.10000000149011612px_4px_0px_rgba(11,49,219,0.40)] outline outline-1 outline-offset-[-1px] outline-[#aebaf3]';
+  const getVariantStyle = (columnVariant, columnKey, itemValue) => {
+    if (columnVariant === "primary") {
+      return "w-10 flex justify-center items-center bg-[#0b31db] text-[#f2fffa] text-sm font-semibold rounded-[10px] px-3 py-2 shadow-[0px_0.10000000149011612px_4px_0px_rgba(11,49,219,0.40)] outline outline-1 outline-offset-[-1px] outline-[#aebaf3]";
+    } 
+    if (columnKey === "jenjang") {
+      switch (itemValue) {
+        case "TS":
+          return "w-[75px] flex justify-center items-center bg-[#c3cffe] text-[#0b31db] text-sm font-medium rounded-[22px] px-3 py-2";
+        case "SMP":
+          return "w-[75px] flex justify-center items-center bg-[#fdecce] text-[#cb8408] text-sm font-medium rounded-[22px] px-3 py-2";
+        case "SMK":
+          return "w-[75px] flex justify-center items-center bg-[#c5e6e4] text-[#146168] text-sm font-medium rounded-[22px] px-3 py-2";
+        default:
+          return "";
+      }
     }
-    return '';
-  }
+    return "";
+  };
 
   return (
     <div className="w-full flex flex-col gap-4">
       {/* Control panel */}
       <div className="bg-white p-4 rounded-md flex flex-wrap justify-between items-center gap-4">
-        <div className='flex gap-6'>
+        <div className="flex gap-6">
           <div className="flex items-center gap-2 text-sm">
-            <span><Text>show</Text></span>
+            <span>
+              <Text>show</Text>
+            </span>
             <select
               className="border rounded px-2 py-1"
               value={showEntries}
@@ -67,16 +89,12 @@ export default function PemasukanTable(props) {
             >
               {entries?.map((entry) => (
                 <option key={entry} value={entry}>
-                  <Text>
-                    {entry}
-                  </Text>
+                  <Text>{entry}</Text>
                 </option>
               ))}
             </select>
             <span>
-              <Text>
-                entries
-              </Text>
+              <Text>entries</Text>
             </span>
           </div>
 
@@ -89,13 +107,13 @@ export default function PemasukanTable(props) {
           />
         </div>
 
-        <div className='flex gap-4'>
+        <div className="flex gap-4">
           {/* <Button hasNotify={true} notifyHandler={() => { toast.success("Berhasil Menambahkan Data") }}>Tambah Data</Button>
           <Button variants="inline-orange">Export Data</Button> */}
           {componentButton?.map((button, index) => {
-            const { func, text, variants, hasNotify, notifyHandler } = button
+            const { func, text, variants, hasNotify, notifyHandler } = button;
             return (
-              <Button 
+              <Button
                 key={index}
                 onClick={func}
                 variants={variants}
@@ -104,7 +122,7 @@ export default function PemasukanTable(props) {
               >
                 {text}
               </Button>
-            )
+            );
           })}
         </div>
       </div>
@@ -114,64 +132,63 @@ export default function PemasukanTable(props) {
         <table className="w-full bg-white text-sm text-left">
           <thead className="bg-gray-100 text-gray-700">
             <tr>
-              {
-                columns?.map((column) => (
-                  <TableHeader key={column.key} >
-                    <Text>
-
-                      {column.label}
-                    </Text>
-                  </TableHeader>
-                ))
-              }
+              {columns?.map((column) => (
+                <TableHeader key={column.key}>
+                  <Text>{column.label}</Text>
+                </TableHeader>
+              ))}
               {hasAction && (
                 <th className="px-4 py-2 ">
-                  <Text>
-                    Action
-                  </Text>
+                  <Text>Action</Text>
                 </th>
               )}
             </tr>
           </thead>
           <tbody>
             {visibleData?.map((item, index) => {
-              const dataRow = item
-              return <tr key={item.id} className="hover:bg-gray-50 transition-all odd:bg-[#f9fbff] even:bg-[#F7F6FE]">
-                {
-                  columns?.map((column) => (
+              const dataRow = item;
+              return (
+                <tr
+                  key={item.id}
+                  className="hover:bg-gray-50 transition-all odd:bg-[#f9fbff] even:bg-[#F7F6FE]"
+                >
+                  {columns?.map((column) => (
                     <>
                       <td key={column.key} className="px-4 py-2">
-                        <Text className={getVariantStyle(column.variants)}>
-
+                        <Text className={getVariantStyle(column.variants, column.key, item[column.key])}>
                           {item[String(column.key)]}
                         </Text>
                       </td>
                     </>
-                  ))
-                }
-                {
-                  hasAction && (
+                  ))}
+                  {hasAction && (
                     <td className="px-4 py-2 flex flex-row gap-2">
                       {componentAction.map((item) => {
-                        const { func, icon, style, title="" } = item
+                        const { func, icon, style, title = "" } = item;
                         return (
-                          <button onClick={() => func(dataRow)} className={style ? `${style}` : 'px-4 py-4 bg-black'}>
-                            {icon}<Text>{title}</Text>
+                          <button
+                            onClick={() => func(dataRow)}
+                            className={
+                              style ? `${style}` : "px-4 py-4 bg-black"
+                            }
+                          >
+                            {icon}
+                            <Text>{title}</Text>
                           </button>
-                        )
+                        );
                       })}
                     </td>
-                  )
-                }
-              </tr>
-            }
-            )}
+                  )}
+                </tr>
+              );
+            })}
             {visibleData?.length === 0 && (
               <tr>
-                <td colSpan={6} className="text-center py-4 text-gray-500 italic">
-                  <Text>
-                    Tidak ada data ditemukan.
-                  </Text>
+                <td
+                  colSpan={6}
+                  className="text-center py-4 text-gray-500 italic"
+                >
+                  <Text>Tidak ada data ditemukan.</Text>
                 </td>
               </tr>
             )}
