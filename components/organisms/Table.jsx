@@ -142,12 +142,12 @@ export default function PemasukanTable(props) {
                 }
                 {
                   hasAction && (
-                    <td className="px-4 py-2 flex flex-row gap-2 justify-center">
+                    <td className="px-4 py-2 flex flex-row gap-2">
                       {componentAction.map((item) => {
-                        const { func, icon, style } = item
+                        const { func, icon, style, title="" } = item
                         return (
                           <button onClick={() => func(dataRow)} className={style ? `${style}` : 'px-4 py-4 bg-black'}>
-                            {icon}
+                            {icon}<Text>{title}</Text>
                           </button>
                         )
                       })}

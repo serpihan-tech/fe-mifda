@@ -6,7 +6,7 @@ import Text from "@/components/atoms/Text"
 import Modal from "@/components/atoms/Modal"
 import { getKeuanganTable } from "@/lib/keuangan.js"
 
-export default function clientComponent() {
+export default function PembayaranPage() {
   const [dataKeuanganTable, setDataKeuanganTable] = useState({
     result: [],
     status: false

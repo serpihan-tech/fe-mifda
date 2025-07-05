@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "bulan": "Januari",
+    "putra": 5,
+    "putri": 3,
+    "total_tunggakan": 800000
+  },
+  {
+    "id": 2,
+    "bulan": "Februari",
+    "putra": 2,
+    "putri": 4,
+    "total_tunggakan": 450000
+  },
+  {
+    "id": 3,
+    "bulan": "Maret",
+    "putra": 3,
+    "putri": 5,
+    "total_tunggakan": 670000
+  },
+  {
+    "id": 4,
+    "bulan": "April",
+    "putra": 4,
+    "putri": 2,
+    "total_tunggakan": 500000
+  },
+  {
+    "id": 5,
+    "bulan": "Mei",
+    "putra": 6,
+    "putri": 3,
+    "total_tunggakan": 910000
+  }
+]

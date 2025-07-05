@@ -20,6 +20,8 @@ export default function Button(props) {
     'bg-[#FDECCE] text-[#F49F0A] rounded-full py-2 px-8 text-sm font-semibold border border-[#FBDFAD]' :
     variants === 'secondary' ? 
     'bg-[#146168] text-[#f2fffa] rounded-[10px] px-4 py-2 text-base font-semibold rounded-[10px] hover:shadow-[0px_0.5px_8px_0px_rgba(15,74,73,0.40)] outline outline-1 outline-offset-[-1px] outline-[#b1cacd]' :
+    variants === 'secondary-2' ? 
+    'bg-[#f2fffa] text-[#146168] rounded-[10px] px-4 py-2 text-base font-semibold rounded-[10px] hover:shadow-[0px_0.5px_8px_0px_rgba(15,74,73,0.40)] outline outline-1 outline-offset-[-1px] outline-[#b1cacd]' :
     '')
   return (
     <>
