@@ -35,6 +35,7 @@ export default function PemasukanTable(props) {
     hasAction, // Apakah ada Column action
     componentAction, // Fungsi yang akan dijalankan ketika tombol action di klik {function, icon, color}
     componentButton, // Buttons di bagian kanan atas tabel
+    variants = ''
   } = props;
   const [search, setSearch] = useState('');
   const [showEntries, setShowEntries] = useState(10);
@@ -43,6 +44,14 @@ export default function PemasukanTable(props) {
   //   item.nama_pj.toLowerCase().includes(search.toLowerCase())
   // );
   const visibleData = data
+
+  // Fungsi untuk mendapatkan styling berdasarkan variant
+  const getVariantStyle = (columnVariant) => {
+    if (columnVariant === 'primary') {
+      return 'w-10 flex justify-center items-center bg-[#0b31db] text-[#f2fffa] text-sm font-semibold rounded-[10px] px-3 py-2 shadow-[0px_0.10000000149011612px_4px_0px_rgba(11,49,219,0.40)] outline outline-1 outline-offset-[-1px] outline-[#aebaf3]';
+    }
+    return '';
+  }
 
   return (
     <div className="w-full flex flex-col gap-4">
@@ -132,7 +141,7 @@ export default function PemasukanTable(props) {
                   columns?.map((column) => (
                     <>
                       <td key={column.key} className="px-4 py-2">
-                        <Text>
+                        <Text className={getVariantStyle(column.variants)}>
 
                           {item[String(column.key)]}
                         </Text>

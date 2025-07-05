@@ -33,5 +33,40 @@
     "putra": 6,
     "putri": 3,
     "total_tunggakan": 910000
+  },
+  {
+    "id": 6,
+    "bulan": "Juni",
+    "putra": 5,
+    "putri": 3,
+    "total_tunggakan": 800000
+  },
+  {
+    "id": 7,
+    "bulan": "Juli",
+    "putra": 2,
+    "putri": 4,
+    "total_tunggakan": 450000
+  },
+  {
+    "id": 8,
+    "bulan": "Agustus",
+    "putra": 3,
+    "putri": 5,
+    "total_tunggakan": 670000
+  },
+  {
+    "id": 9,
+    "bulan": "Oktober",
+    "putra": 4,
+    "putri": 2,
+    "total_tunggakan": 500000
+  },
+  {
+    "id": 10,
+    "bulan": "November",
+    "putra": 6,
+    "putri": 3,
+    "total_tunggakan": 910000
   }
 ]

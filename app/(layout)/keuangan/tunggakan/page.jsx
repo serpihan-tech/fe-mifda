@@ -43,10 +43,12 @@ export default function TunggakanPage() {
               {
                 key: "putra",
                 label: "putra",
+                variants: "primary"
               },
               {
                 key: "putri",
                 label: "putri",
+                variants: "primary"
               },
               {
                 key: "total_tunggakan",
