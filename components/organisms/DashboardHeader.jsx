@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 export default function DashboardHeader() {
   return (
     <div
-      className={`${montserrat.className} w-full bg-[#f9fffb] h-[145px] flex py-10 ps-[60px] pe-14 justify-between`}
+      className={`${montserrat.className} w-full bg-[#f9fffb] h-[145px] flex py-10 ps-[60px] pe-12 justify-between`}
     >
       <div>
         <div className="text-black text-base font-medium">Welcome Back!,</div>
