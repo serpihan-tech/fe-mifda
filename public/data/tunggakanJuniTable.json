@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "nama": "Ahmad Fauzi",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567890",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 150000
+  },
+  {
+    "id": 2,
+    "nama": "Siti Nurhaliza",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567891",
+    "jenjang": "TK",
+    "tunggakan_bulan_ini": 75000
+  },
+  {
+    "id": 3,
+    "nama": "Budi Santoso",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567892",
+    "jenjang": "SMP",
+    "tunggakan_bulan_ini": 120000
+  },
+  {
+    "id": 4,
+    "nama": "Dewi Kartika",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567893",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 90000
+  },
+  {
+    "id": 5,
+    "nama": "Rizky Pratama",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567894",
+    "jenjang": "SMA",
+    "tunggakan_bulan_ini": 180000
+  },
+  {
+    "id": 6,
+    "nama": "Maya Sari",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567895",
+    "jenjang": "SMP",
+    "tunggakan_bulan_ini": 135000
+  },
+  {
+    "id": 7,
+    "nama": "Andi Wijaya",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567896",
+    "jenjang": "TK",
+    "tunggakan_bulan_ini": 85000
+  },
+  {
+    "id": 8,
+    "nama": "Lestari Indah",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567897",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 110000
+  },
+  {
+    "id": 9,
+    "nama": "Hendra Kusuma",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567898",
+    "jenjang": "SMP",
+    "tunggakan_bulan_ini": 95000
+  },
+  {
+    "id": 10,
+    "nama": "Ratna Dewi",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567899",
+    "jenjang": "SMA",
+    "tunggakan_bulan_ini": 165000
+  },
+  {
+    "id": 11,
+    "nama": "Agus Setiawan",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567900",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 110000
+  },
+  {
+    "id": 12,
+    "nama": "Ani Susanti",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567901",
+    "jenjang": "TK",
+    "tunggakan_bulan_ini": 70000
+  },
+  {
+    "id": 13,
+    "nama": "Bayu Anggoro",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567902",
+    "jenjang": "SMP",
+    "tunggakan_bulan_ini": 140000
+  },
+  {
+    "id": 14,
+    "nama": "Citra Dewi",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567903",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 100000
+  },
+  {
+    "id": 15,
+    "nama": "Dimas Anggoro",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567904",
+    "jenjang": "SMA",
+    "tunggakan_bulan_ini": 170000
+  },
+  {
+    "id": 16,
+    "nama": "Elsa Pratiwi",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567905",
+    "jenjang": "TK",
+    "tunggakan_bulan_ini": 75000
+  },
+  {
+    "id": 17,
+    "nama": "Fajar Nugroho",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567906",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 85000
+  },
+  {
+    "id": 18,
+    "nama": "Gita Sari",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567907",
+    "jenjang": "SMP",
+    "tunggakan_bulan_ini": 125000
+  },
+  {
+    "id": 19,
+    "nama": "Hafiz Maulana",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567908",
+    "jenjang": "SMA",
+    "tunggakan_bulan_ini": 160000
+  },
+  {
+    "id": 20,
+    "nama": "Ika Sari",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567909",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 110000
+  },
+  {
+    "id": 21,
+    "nama": "Joko Susilo",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567910",
+    "jenjang": "SMP",
+    "tunggakan_bulan_ini": 135000
+  },
+  {
+    "id": 22,
+    "nama": "Kartika Putri",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567911",
+    "jenjang": "TK",
+    "tunggakan_bulan_ini": 80000
+  },
+  {
+    "id": 23,
+    "nama": "Lukman Hakim",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567912",
+    "jenjang": "SMA",
+    "tunggakan_bulan_ini": 145000
+  },
+  {
+    "id": 24,
+    "nama": "Mega Yunita",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567913",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 95000
+  },
+  {
+    "id": 25,
+    "nama": "Naufal Akbar",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567914",
+    "jenjang": "SMP",
+    "tunggakan_bulan_ini": 130000
+  },
+  {
+    "id": 26,
+    "nama": "Olivia Putri",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567915",
+    "jenjang": "SMA",
+    "tunggakan_bulan_ini": 175000
+  },
+  {
+    "id": 27,
+    "nama": "Pandu Setiawan",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567916",
+    "jenjang": "TK",
+    "tunggakan_bulan_ini": 65000
+  },
+  {
+    "id": 28,
+    "nama": "Quina Sari",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567917",
+    "jenjang": "SD",
+    "tunggakan_bulan_ini": 105000
+  },
+  {
+    "id": 29,
+    "nama": "Reza Maulana",
+    "jenis_kelamin": "L",
+    "nomor_telepon": "081234567918",
+    "jenjang": "SMP",
+    "tunggakan_bulan_ini": 120000
+  },
+  {
+    "id": 30,
+    "nama": "Sri Wahyuni",
+    "jenis_kelamin": "P",
+    "nomor_telepon": "081234567919",
+    "jenjang": "SMA",
+    "tunggakan_bulan_ini": 155000
+  }
+]
