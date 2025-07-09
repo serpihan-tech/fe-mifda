@@ -48,9 +48,9 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ---------- | -------------------------------------------------- |
 | <img src="https://avatars.githubusercontent.com/u/74742326?v=4" width="50" height="50" style="border-radius:50%">  | **Athalla Cahyo Nugroho**      | Front End  | [@athalla](https://github.com/AthallaCahyoNugroho) |
 | <img src="https://avatars.githubusercontent.com/u/127614248?v=4" width="50" height="50" style="border-radius:50%"> | **Melinda Wijaya**             | Front End  | [@melinda](https://github.com/melindawijaya)       |
+| <img src="https://avatars.githubusercontent.com/u/147142021?v=4" width="50" height="50" style="border-radius:50%"> | **Arwan Muhtada**              | Front End  | [@arwan](https://github.com/wanmuhtd)              |
 | <img src="https://avatars.githubusercontent.com/u/112356083?v=4" width="50" height="50" style="border-radius:50%"> | **Muhammad Azka Nabhan Sauqi** | Back End   | [@aceng](https://github.com/azkanabhan)            |
 | <img src="https://avatars.githubusercontent.com/u/152856574?v=4" width="50" height="50" style="border-radius:50%"> | **Rizal Anas**                 | Back End   | [@rizal](https://github.com/RizalAnas00)           |
-| <img src="https://avatars.githubusercontent.com/u/147142021?v=4" width="50" height="50" style="border-radius:50%"> | **Arwan Muhtada**              | Mobile Dev | [@arwan](https://github.com/wanmuhtd)              |
 | <img src="https://avatars.githubusercontent.com/u/172140928?v=4" width="50" height="50" style="border-radius:50%"> | **Dina Rizka Luviani**         | UI/UX      | [@dina](https://github.com/DinaRizkaLuviani)       |
 
 <br><br>
